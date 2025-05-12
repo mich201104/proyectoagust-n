@@ -1,4 +1,4 @@
-/* Estilos base */
+ /* Estilos base */
 :root {
   --primary-color: #478ac9;
   --secondary-color: #f8f9fa;
@@ -38,7 +38,7 @@ body {
 }
 
 .brand-logo img {
-  height: auto; /* Cambiado de 50px para respetar tu width="120" en HTML */
+  height: auto; /* Cambiado de 50px para respetar width="120" en HTML */
   width: 120px;
 }
 
