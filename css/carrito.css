@@ -1,0 +1,360 @@
+/* Variables CSS reutilizables para colores y estilos */
+:root {
+  --primary-color: #478ac9;       /* Color azul principal */
+  --secondary-color: #f8f9fa;     /* Color de fondo claro */
+  --text-color: #333;             /* Color de texto principal */
+  --light-gray: #e9ecef;          /* Gris claro para bordes/fondos */
+  --white: #fff;                  /* Blanco puro */
+}
+
+/* Estilos base para toda la página */
+body {
+  font-family: 'Roboto', sans-serif;  /* Fuente principal */
+  color: var(--text-color);
+  line-height: 1.6;                  /* Espaciado entre líneas */
+  margin: 0;
+  padding: 0;
+}
+
+/* Contenedor principal que centra el contenido */
+.container {
+  width: 90%;                     
+  max-width: 1200px;              
+  margin: 0 auto;                 
+  padding: 0 20px;                
+}
+
+/* ----- Estilos del encabezado ----- */
+.main-header {
+  background-color: var(--white);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);  /* Sombra sutil */
+  position: sticky;                /* Encabezado fijo */
+  top: 0;
+  z-index: 100;                    /* Asegura que esté sobre otros elementos */
+}
+
+/* Flexbox para alinear logo, navegación y perfil */
+.main-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Estilos del logo */
+.brand-logo img {
+  height: auto;                
+  width: 120px;                   
+}
+
+/* Estilos de la barra de navegación */
+.main-nav .nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 30px;                      /* Espacio entre elementos */
+}
+
+/* Estilos de los enlaces de navegación */
+.nav-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+  padding: 8px 0;
+  transition: color 0.3s;         /* Al pasar el ratón cambia leve de color*/
+}
+
+/* Efecto hover y estado activo */
+.nav-link:hover {
+  color: var(--primary-color);
+}
+
+/* Iconos de navegación */
+.nav-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;              /* Espacio entre icono y texto */
+}
+
+/* Perfil de usuario */
+.user-profile {
+  display: flex;
+  align-items: center;
+}
+
+/* Enlace activo actual */
+.nav-link-active{
+  border-bottom: 2px solid var(--primary-color);
+  color: var(--primary);
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;             /* Círculo perfecto */
+  object-fit: cover;              /* Ajuste de imagen */
+}
+
+/* ----- Contenido principal ----- */
+.page-header {
+  background-color: #e2f0fd;      /* Fondo azul claro */
+  padding: 40px 0;
+  text-align: center;
+}
+
+/* Título principal (letra bonita) */
+.page-title {
+  font-family: 'Lobster', cursive;
+  color: var(--primary-color);
+  margin: 0;
+  font-size: 2.5rem;           
+}
+
+/* Sección del carrito */
+.cart-section {
+  padding: 40px 0;
+}
+
+/* Mensaje de carrito vacío */
+.cart-empty {
+  text-align: center;
+  padding: 40px 0;
+}
+
+/* Mensaje de Tu carrito está vacío*/
+.cart-empty h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: var(--text-color);
+}
+
+/* Mensaje de ¡Añade algunos productos!*/
+.cart-empty p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  color: #666;                    
+}
+
+/* ----- Estilos de botones ----- */
+.btn {
+  display: inline-block;
+  padding: 10px 25px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s;           /* Al pasar el ratón cambia de color*/
+}
+
+/* Botón primario (azul) */
+.primary-btn {
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: 2px solid var(--primary-color);
+}
+
+/* Efecto hover: fondo transparente */
+.primary-btn:hover {
+  background-color: transparent;
+  color: var(--primary-color);
+}
+
+/* ----- Diseño responsivo ----- */
+@media (max-width: 768px) {
+  /* Cambia a diseño vertical en móviles */
+  .main-header .container {
+      flex-direction: column;
+      gap: 15px;
+  }
+  
+  /* Reduce espacio entre items de navegación */
+  .main-nav .nav-list {
+      gap: 10px;
+  }
+  
+  /* Título más pequeño en móviles */
+  .page-title {
+      font-size: 2rem;
+  }
+}
+
+/* --- Añade esto al final de tu carrito.css actual --- */
+
+/* Estilos para el carrito con productos */
+.cart-items {
+  margin-bottom: 30px;
+}
+
+.cart-item {
+  display: flex;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--light-gray);
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.item-image {
+  width: 100px;
+  flex-shrink: 0;
+}
+
+.item-image img {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid var(--light-gray);
+}
+
+.item-details {
+  flex-grow: 1;
+}
+
+.item-title {
+  margin: 0 0 5px;
+  font-size: 1.1rem;
+  color: var(--text-color);
+}
+
+.item-seller {
+  margin: 0 0 10px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.item-price {
+  margin: 0 0 15px;
+  font-weight: 500;
+  color: var(--primary-color);
+}
+
+.item-quantity {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.item-quantity button {
+  background: var(--light-gray);
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+.item-quantity button:hover {
+  background: #ddd;
+}
+
+.item-quantity span {
+  margin: 0 15px;
+  min-width: 20px;
+  text-align: center;
+}
+
+.item-total {
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.item-remove {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  align-self: flex-start;
+}
+
+.item-remove img {
+  width: 18px;
+  opacity: 0.6;
+  transition: opacity 0.3s;
+}
+
+.item-remove:hover img {
+  opacity: 1;
+}
+
+/* Resumen del pedido */
+.cart-summary {
+  background: var(--secondary-color);
+  padding: 25px;
+  border-radius: 8px;
+  margin-top: 30px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.summary-row.total {
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-bottom: none;
+  margin-bottom: 25px;
+  color: var(--primary-color);
+}
+
+.cart-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.secondary-btn {
+  background: var(--light-gray);
+  color: var(--text-color);
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  padding: 12px 25px;
+}
+
+.secondary-btn:hover {
+  background: #ddd;
+}
+
+/* Contador del carrito en el nav */
+#contador-carrito {
+  background: var(--primary-color);
+  color: var(--white);
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 0.75rem;
+  margin-left: 5px;
+}
+
+/* Transición para mostrar/ocultar el carrito */
+#carrito-con-productos {
+  transition: opacity 0.3s ease;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .cart-item {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .item-image {
+    width: 100%;
+    max-width: 200px;
+  }
+  
+  .cart-actions {
+    flex-direction: column;
+  }
+  
+  .secondary-btn, #proceder-pago {
+    width: 100%;
+  }
+}

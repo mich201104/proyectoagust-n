@@ -1,0 +1,376 @@
+/* 
+  Variables CSS reutilizables 
+  - Colores principales, sombras y transiciones para consistencia visual
+*/
+:root {
+  --primary: #478ac9;
+  --light-bg: #f5f9ff;
+  --text: #333;
+  --text-light: #666;
+  --white: #fff;
+  --gray: #e9ecef;
+  --radius: 8px;
+  --shadow: 0 4px 6px rgba(0,0,0,0.1);
+  --shadow-hover: 0 8px 15px rgba(0,0,0,0.15);
+  --transition: all 0.3s ease;
+}
+
+/* Estilos base para toda la página */
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--text);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos para títulos */
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+/* Contenedor principal que centra el contenido */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ========= HEADER ========= */
+.main-header {
+  background-color: var(--white);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100; /* Asegura que el header esté siempre encima */
+}
+
+/* Flexbox para alinear logo, navegación y perfil */
+.main-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Estilo del logo */
+.brand-logo img {
+  width: 120px;
+  height: auto;
+}
+
+/* Estilos de navegación */
+.main-nav .nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 30px; 
+}
+
+.nav-item {
+  list-style: none;
+}
+
+/* Estilos de enlaces de navegación */
+.nav-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+  transition: var(--transition); 
+}
+
+/* Enlace activo actual */
+.nav-link.active {
+  border-bottom: 2px solid var(--primary);
+  color: var(--primary);
+}
+
+/* Iconos de navegación */
+.nav-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+/* Perfil de usuario */
+.user-profile {
+  display: flex;
+  align-items: center;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; /* Hace la imagen circular */
+  object-fit: cover;
+}
+
+/* ========= HERO SECTION ========= */
+.hero-section {
+  background: var(--light-bg);
+  padding: 80px 0;
+}
+
+/* Contenedor flexible para texto e imagen */
+.hero-content {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-image {
+  flex: 1;
+}
+
+/* Título principal */
+.hero-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+/* Descripción */
+.hero-description {
+  color: var(--text-light);
+  margin-bottom: 25px;
+  font-size: 1.1rem;
+}
+
+/* Imagen destacada */
+.product-showcase {
+  width: 100%;
+  max-width: 500px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+/* ========= CATÁLOGO ========= */
+.catalog-section {
+  padding: 80px 0;
+}
+
+/* Título de sección con subrayado decorativo */
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+/* Grid de productos responsive */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+/* Tarjeta de producto */
+.product-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: var(--transition); /* Animación suave al hacer hover */
+}
+
+/* Efecto hover en tarjetas */
+.product-card:hover {
+  transform: translateY(-5px); /* Levanta ligeramente la tarjeta */
+  box-shadow: var(--shadow-hover);
+}
+
+/* Imagen del producto */
+.product-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover; /* Asegura que la imagen cubra el espacio */
+}
+
+/* Contenedor de información del producto */
+.product-info {
+  padding: 20px;
+}
+
+/* Nombre del producto */
+.product-name {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+/* Precio con color destacado */
+.product-price {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 15px;
+}
+
+/* Botón "Añadir al carrito" */
+.add-to-cart {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius);
+  transition: var(--transition);
+}
+
+/* Efecto hover del botón */
+.add-to-cart:hover {
+  background: var(--white);
+  color: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+/* ========= PROCESO DE COMPRA ========= */
+.how-we-work {
+  background: var(--light-bg);
+  padding: 80px 0;
+}
+
+/* Grid de pasos responsive */
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Estilo de cada paso */
+.step {
+  background: var(--white);
+  padding: 30px 20px;
+  border-radius: var(--radius);
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+
+/* Número del paso */
+.step-number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 15px;
+}
+
+/* ========= BOTÓN DE REGRESO ========= */
+.button-container {
+    text-align: center;
+    margin: 50px 0 20px;
+}
+.simple-back-button {
+    padding: 10px 90px;
+    background-color: #478ac9;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 20px;
+    transition: background-color 0.2s;
+}
+
+.simple-back-button:hover {
+    background-color: #3a7ab9;
+}
+
+/* ========= Acomodar al tamaño ========= */
+@media (max-width: 992px) {
+  /* Cambia a diseño vertical en tablets */
+  .hero-content {
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .hero-image {
+    order: -1; /* Coloca la imagen arriba en móviles */
+  }
+}
+
+@media (max-width: 768px) {
+  /* Ajustes para móviles */
+  .main-header .container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .main-nav .nav-list {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .hero-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  /* Un solo paso por línea en móviles pequeños */
+  .process-steps {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Reducción de padding en móviles */
+  .hero-section, .catalog-section, .how-we-work {
+    padding: 60px 0;
+  }
+}
+
+/* Estilos para los controles de cantidad */
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.quantity-minus, .quantity-plus {
+    background: var(--light-gray);
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quantity-input {
+    width: 50px;
+    text-align: center;
+    margin: 0 5px;
+    padding: 5px;
+    border: 1px solid var(--light-gray);
+    border-radius: 4px;
+}
+
+/* Feedback al agregar al carrito */
+.add-to-cart-feedback {
+    position: absolute;
+    background: var(--primary-color);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    animation: fadeInOut 2s ease-in-out;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; transform: translateY(10px); }
+    20% { opacity: 1; transform: translateY(0); }
+    80% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(-10px); }
+}

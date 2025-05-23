@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dino-Bake</title>
+    <title>Flor de la Bahía</title>
     <!-- Enlace a css -->
-    <link rel="stylesheet" href="../css/CatalogoDino.css">
+    <link rel="stylesheet" href="../css/Catalogoflores.css">
     <!-- Fuentes de Google para letra bonita -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     
@@ -14,9 +14,11 @@
 <body>
     <header class="main-header">
         <div class="container">
+
             <a href="index.html" class="brand-logo">
                 <img src="images/logo.png" alt="Dino-Bake Logo" width="120">
             </a>
+            
             <!-- Menú de navegación principal -->
             <nav class="main-nav">
                 <ul class="nav-list">
@@ -33,6 +35,7 @@
                             <span>Carrito</span>
                         </a>
                     </li>
+                    
                     <li class="nav-item">
                         <a href="contacto.html" class="nav-link">
                             <img src="images/contacto.png" alt="Contacto" class="nav-icon">
@@ -47,38 +50,37 @@
         </div>
     </header>
     
-    <!-- Contenido principal -->
+    <!-- Contenido principal de la página -->
     <main class="main-content">
         <section class="hero-section">
             <div class="container">
+                <div id="catalogo"></div>
                 <div class="hero-content">
                     <div class="hero-text">
-                        <h1>DINO-BAKE</h1>
+                        <h1>Flor de la Bahía</h1>
                         <p class="hero-description">
-                          Nuestros postres de pequeña presentación están pensados para deleitar todos tus sentidos. Son mucho más que dulces: son pequeños tesoros artesanales que transforman lo cotidiano en momentos memorables.
-                          Desde los brownies, con su textura húmeda y su sabor profundo a chocolate, hasta nuestros pays, que combinan una base crujiente con rellenos frutales y cremosos irresistibles, cada pieza es elaborada cuidadosamente para lograr un equilibrio perfecto entre sabor, presentación y frescura.
-                          Son ideales para consentirte, sorprender a tus invitados o dar un detalle especial en cualquier celebración.
-                          Descubre la magia de lo pequeño y permite que nuestros postres llenen tu día de dulzura, textura y momentos felices.
+                         ¡En Flor de la Bahía te ofrecemos las flores más frescas y hermosas de Chetumal! Orgullosamente enraizados en nuestra bahía, cada arreglo 
+                         refleja la vitalidad de la región. Seleccionamos y cuidamos cada flor para garantizarte la máxima calidad y frescura, trayendo la esencia 
+                         de Chetumal directo a tu hogar. Descubre por qué somos la elección número uno para quienes buscan la excelencia floral en nuestra ciudad.
                         </p>
                     </div>
                     <div class="hero-image">
-                        <img src="images/dinobake.png"  class="product-showcase">
+                        <img src="images/florlogo.png" class="product-showcase">
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Catálogo de productos -->
+        <!-- Sección de catálogo de productos -->
         <section class="catalog-section">
             <div class="container">
                 <h2 class="section-title">Nuestros productos</h2>
                 <div class="product-grid">
-                    <!--Productos-->
-                    <div class="product-card" data-id="brownie001" data-nombre="Brownies" data-precio="35" data-emprendedor="Dino Bake">
-                        <img src="images/Brownie.jpg" alt="Brownies" class="product-image">
+                    <div class="product-card" data-id="flores001" data-nombre="flores1" data-precio="500" data-emprendedor="flores">
+                        <img src="images/rosas1.jpg" alt="rosas1" class="product-image">
                         <div class="product-info">
-                            <h3>Brownies</h3>
-                            <p class="product-price">$35 c/u</p>
+                            <h3>Entre Hilos y Flores</h3>
+                            <p class="product-price">$500 c/u</p>
                             <div class="quantity-controls">
                                 <button class="quantity-minus">-</button>
                                 <input type="number" value="1" min="1" class="quantity-input">
@@ -88,11 +90,11 @@
                         </div>
                     </div>
 
-                    <div class="product-card" data-id="fresas001" data-nombre="Fresas con crema" data-precio="65" data-emprendedor="Dino Bake">
-                        <img src="images/fresas.jpg" alt="Fresas con crema" class="product-image">
+                    <div class="product-card" data-id="flores001" data-nombre="flores2" data-precio="600" data-emprendedor="flores">
+                        <img src="images/rosas2.jpg" alt="rosas2" class="product-image">
                         <div class="product-info">
-                            <h3>Fresas con crema</h3>
-                            <p class="product-price">$65 c/u</p>
+                            <h3>Rosa Bela</h3>
+                            <p class="product-price">$600 c/u</p>
                             <div class="quantity-controls">
                                 <button class="quantity-minus">-</button>
                                 <input type="number" value="1" min="1" class="quantity-input">
@@ -102,11 +104,11 @@
                         </div>
                     </div>
 
-                    <div class="product-card" data-id="galletas001" data-nombre="galletas" data-precio="20" data-emprendedor="Dino Bake">
-                        <img src="images/Galletas.jpg" alt="galletas" class="product-image">
+                    <div class="product-card" data-id="flores001" data-nombre="flores3" data-precio="400" data-emprendedor="flores">
+                        <img src="images/rosas3.jpg" alt="rosas3" class="product-image">
                         <div class="product-info">
-                            <h3>Galletas</h3>
-                            <p class="product-price">$20 c/u</p>
+                            <h3>Diseño con Alma</h3>
+                            <p class="product-price">$400 c/u</p>
                             <div class="quantity-controls">
                                 <button class="quantity-minus">-</button>
                                 <input type="number" value="1" min="1" class="quantity-input">
@@ -116,11 +118,11 @@
                         </div>
                     </div>
 
-                    <div class="product-card" data-id="empanaditas001" data-nombre="empanadas" data-precio="20" data-emprendedor="Dino Bake">
-                        <img src="images/empanaditas.jpg" alt="empanadas" class="product-image">
+                    <div class="product-card" data-id="flores001" data-nombre="flores4" data-precio="450" data-emprendedor="flores">
+                        <img src="images/rosas4.jpg" alt="rosas4" class="product-image">
                         <div class="product-info">
-                            <h3>Empanaditas</h3>
-                            <p class="product-price">$20 c/u</p>
+                            <h3>Coqueta</h3>
+                            <p class="product-price">$450 c/u</p>
                             <div class="quantity-controls">
                                 <button class="quantity-minus">-</button>
                                 <input type="number" value="1" min="1" class="quantity-input">
@@ -129,47 +131,49 @@
                             <button class="btn add-to-cart">Añadir al carrito</button>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
 
-        <!-- Cómo comprar -->
+        <!-- Sección del proceso de compra -->
         <section class="how-we-work">
             <div class="container">
                 <h2 class="section-title">Cómo comprar</h2>
-                <!-- Pasos del proceso -->
                 <div class="process-steps">
                     <div class="step">
                         <div class="step-number">1</div>
                         <h3>Realiza tu pedido</h3>
                     </div>
+
                     <div class="step">
                         <div class="step-number">2</div>
                         <h3>Recibe confirmación</h3>
                     </div>
+
                     <div class="step">
                         <div class="step-number">3</div>
                         <h3>Realiza el pago</h3>
                     </div>
+                
                     <div class="step">
                         <div class="step-number">4</div>
                         <h3>Se entrega</h3>
                     </div>
                 </div>
             </div>
+            
             <!-- Botón de regreso -->
             <div class="button-container">
-             <a href="emprendedores.html" class="simple-back-button">Regresar</a>
+                <a href="emprendedores.html" class="simple-back-button">Regresar</a>
             </div>
         </section>
     </main>
-    
     <script src="../js/auth.js"></script>
         <script src="../js/catalogo.js"></script>
         <script>
         // Actualizar contador al cargar la página
         document.addEventListener('DOMContentLoaded', actualizarContadorCarrito);
     </script>
+    
 </body>
 </html>

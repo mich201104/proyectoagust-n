@@ -10,39 +10,35 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Lobster&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Barra de navegación superior (encabezado unificado) -->
+    <!-- Encabezado principal del sitio -->
     <header class="main-header">
         <div class="container">
+            <!-- Logo de la marca -->
             <a href="index.html" class="brand-logo">
                 <img src="images/logo.png" alt="Dino-Bake Logo" width="120">
             </a>
             
+            <!-- Navegación principal -->
             <nav class="main-nav">
                 <ul class="nav-list">
                     <li class="nav-item">
-                        <a href="emprendedores.html" class="nav-link">
+                        <a href="subirproducto.html" class="nav-link">
                             <img src="images/emprendedor.png" alt="Emprendedores" class="nav-icon">
-                            <span>Emprendedores</span>
+                            <span>Subir productos</span>
                         </a>
                     </li>
+                   
                     <li class="nav-item">
-                        <a href="carrito.html" class="nav-link">
-                            <img src="images/carrito.png" alt="Carrito" class="nav-icon">
-                            <span>Carrito</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="contacto.html" class="nav-link active">
+                        <a href="#mis-productos" class="nav-link"> <!-- Agrega el #mis-productos -->
                             <img src="images/contacto.png" alt="Contacto" class="nav-icon">
-                            <span>Contacto</span>
+                            <span>Ver mis productos</span>
                         </a>
                     </li>
                 </ul>
             </nav>
-            
-            <div class="user-profile">
-                <img src="images/emprendedor.png" alt="Usuario" class="user-avatar">
-            </div>
+            <a href="perfilemprendedor.html" class="user-profile">
+                <img src="images/emprendedor.png" alt="usuario">
+            </a>
         </div>
     </header>
 
@@ -92,7 +88,7 @@
                     
                     <div class="form-actions">
                         <button type="submit" class="btn-save">Guardar cambios</button>
-                        <a href="emprendedores.html" class="btn-back">Regresar</a>
+                        <a href="subirproducto.html" class="btn-back">Regresar</a>
                         <button type="button" class="btn-logout" id="logoutBtn">Salir</button>
                     </div>
                 </form>

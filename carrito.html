@@ -1,67 +1,122 @@
-    <!DOCTYPE html>
-    <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Mi Carrito </title>
-        <link rel="stylesheet" href="carrito.css">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Carrito</title>
+    <!-- Enlace a css -->
+    <link rel="stylesheet" href="../css/carrito.css">
+    <!-- Fuentes de Google para letra bonita -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Lobster&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Encabezado principal del sitio -->
+    <header class="main-header">
+        <div class="container">
+            <!-- Logo de la marca -->
+            <a href="index.html" class="brand-logo">
+                <img src="images/logo.png" alt="Dino-Bake Logo" width="120">
+            </a>
+            
+            <!-- Navegación principal -->
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="emprendedores.html" class="nav-link">
+                            <img src="images/emprendedor.png" alt="Emprendedores" class="nav-icon">
+                            <span>Emprendedores</span>
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="carrito.html" class="nav-link">
+                            <img src="images/carrito.png" alt="Carrito" class="nav-icon">
+                            <span>Carrito</span>
+                        </a>
+                    </li>
 
-        <!--Letra bonita-->
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Lobster&display=swap" rel="stylesheet">
-        
-    </head>
-    <body>
-        <header class="main-header">
+                    <li class="nav-item">
+                        <a href="contacto.html" class="nav-link">
+                            <img src="images/contacto.png" alt="Contacto" class="nav-icon">
+                            <span>Contáctanos</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <a href="perfil.html" class="user-profile">
+                <img src="images/emprendedor.png" alt="usuario">
+            </a>
+        </div>
+    </header>
+    
+    <!-- Contenido principal de la página -->
+    <main class="main-content">
+        <section class="page-header">
             <div class="container">
-                <a href="index.html" class="brand-logo">
-                    <img src="images/logo.png" alt="Dino-Bake Logo" width="120">
-                </a>
-                
-                <nav class="main-nav">
-                    <ul class="nav-list">
-                        <li class="nav-item">
-                            <a href="emprendedores.html" class="nav-link">
-                                <img src="images/emprendedor.png" alt="Emprendedores" class="nav-icon">
-                                <span>Emprendedores</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="carrito.html" class="nav-link active">
-                                <img src="images/carrito.png" alt="Carrito" class="nav-icon">
-                                <span>Carrito</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="contacto.html" class="nav-link">
-                                <img src="images/contacto.png" alt="Contacto" class="nav-icon">
-                                <span>Contacto</span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-                
-                <div class="user-profile">
-                    <img src="images/emprendedor.png" alt="Usuario" class="user-avatar">
-                </div>
+                <h1 class="page-title">Mi Carrito</h1>
             </div>
-        </header>
-        
-        <main class="main-content">
-            <section class="page-header">
-                <div class="container">
-                    <h1 class="page-title">Mi Carrito</h1>
-                </div>
-            </section>
+        </section>
 
-            <section class="cart-section">
-                <div class="container">
-                    <div class="cart-empty">
+        <!-- Sección del carrito -->
+        <section class="cart-section">
+            <div class="container">
+                <div id="contenido-carrito">
+                    <!-- Mensaje cuando está vacío -->
+                    <div id="carrito-vacio" class="cart-empty">
                         <h2>Tu carrito está vacío</h2>
                         <p>¡Añade algunos productos!</p>
-                        <a href="catalogo.html" class="btn primary-btn">Ver Catálogo</a>
+                        <a href="emprendedores.html" class="btn primary-btn">Ver emprendedores</a>
+                    </div>
+                    
+                    <!-- Contenido cuando hay productos -->
+                    <div id="carrito-con-productos" style="display: none;">
+                        <div class="cart-items" id="lista-carrito">
+                            <!-- Los productos del carrito se insertarán aquí -->
+                        </div>
+                        
+                        <div class="cart-summary">
+                            <div class="summary-row">
+                                <span>Subtotal:</span>
+                                <span id="subtotal">$0.00</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Envío:</span>
+                                <span id="envio">$0.00</span>
+                            </div>
+                            <div class="summary-row total">
+                                <span>Total:</span>
+                                <span id="total">$0.00</span>
+                            </div>
+                            
+                            <div class="cart-actions">
+                                <button id="proceder-pago" class="btn primary-btn">Proceder al Pago</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </section>
-        </main>
-    </body>
-    </html>
+            </div>
+        </section>
+    </main>
+
+    <script src="../js/auth.js"></script>
+    <script src="../js/carrito.js"></script>
+    <script>
+        // Mostrar información del usuario
+        document.addEventListener('DOMContentLoaded', function() {
+            const usuario = JSON.parse(sessionStorage.getItem('currentUser'));
+            if (usuario) {
+                document.getElementById('nombre-usuario').textContent = usuario.nombre;
+            }
+            
+            // Actualizar contador del carrito
+            actualizarContadorCarrito();
+        });
+        
+        function actualizarContadorCarrito() {
+            const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+            document.getElementById('contador-carrito').textContent = carrito.length;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,338 @@
+/* Variables */
+:root {
+  --primary: #478ac9;
+  --primary-dark: #3a7ab9;
+  --light-bg: #f5f9ff;
+  --white: #fff;
+  --gray: #e9ecef;
+  --gray-dark: #d1d7dc;
+  --text: #333;
+  --text-light: #666;
+  --radius: 8px;
+  --shadow: 0 4px 6px rgba(0,0,0,0.1);
+  --transition: all 0.3s ease;
+}
+
+/* Estilos base */
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--text);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+}
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: var(--primary);
+  margin-top: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header */
+.site-header {
+  background-color: var(--white);
+  box-shadow: var(--shadow);
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  width: 120px;
+  height: auto;
+  transition: var(--transition);
+}
+
+.logo img:hover {
+  opacity: 0.9;
+}
+
+.main-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+  transition: var(--transition);
+  font-size: 16px;
+}
+
+.main-nav a:hover {
+  color: var(--primary);
+}
+
+/* Página de registro */
+.signup-page {
+  padding: 60px 0;
+  min-height: calc(100vh - 150px);
+  display: flex;
+  align-items: center;
+}
+
+.signup-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 600px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  background-color: var(--white);
+}
+
+.signup-image {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.signup-form-container {
+  background-color: var(--light-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.signup-form-wrapper {
+  width: 100%;
+  max-width: 400px;
+}
+
+.signup-form-wrapper h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Selector de tipo de cuenta */
+.account-type-selector {
+  display: flex;
+  margin-bottom: 25px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.account-type-btn {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  background-color: var(--gray);
+  color: var(--text-light);
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+}
+
+.account-type-btn.active {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.account-type-btn:not(.active):hover {
+  background-color: var(--gray-dark);
+}
+
+/* Formulario */
+.signup-form {
+  background-color: var(--white);
+  padding: 30px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: var(--text);
+  font-size: 14px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid var(--gray);
+  border-radius: var(--radius);
+  font-family: 'Roboto', sans-serif;
+  transition: var(--transition);
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(71, 138, 201, 0.2);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Botones */
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  border: none;
+  border-radius: var(--radius);
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  width: 100%;
+  font-size: 16px;
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+}
+
+.button-container {
+  text-align: center;
+  margin: 30px 0 20px;
+}
+
+.simple-back-button {
+  padding: 10px 90px;
+  background-color: var(--primary);
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 20px;
+  transition: background-color 0.2s;
+  display: inline-block;
+}
+
+.simple-back-button:hover {
+  background-color: var(--primary-dark);
+}
+
+/* Animación para campos dinámicos */
+#entrepreneur-fields {
+  transition: var(--transition);
+  overflow: hidden;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .signup-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .signup-image {
+    display: none;
+  }
+  
+  .signup-form-container {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .header-content {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .main-nav ul {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .signup-form {
+    padding: 20px;
+  }
+  
+  .account-type-selector {
+    flex-direction: column;
+  }
+  
+  .account-type-btn {
+    padding: 10px;
+  }
+  
+  .simple-back-button {
+    padding: 10px 40px;
+    font-size: 16px;
+  }
+}
+
+/* Efectos para mejorar la interacción */
+input:focus,
+textarea:focus,
+select:focus {
+  transform: translateY(-1px);
+}
+
+.account-type-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.account-type-btn::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.5);
+  opacity: 0;
+  border-radius: 100%;
+  transform: scale(1, 1) translate(-50%);
+  transform-origin: 50% 50%;
+}
+
+.account-type-btn:focus:not(.active)::after {
+  animation: ripple 0.6s ease-out;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0, 0);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(20, 20);
+    opacity: 0;
+  }
+}
