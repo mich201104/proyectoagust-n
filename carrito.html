@@ -11,86 +11,86 @@
 </head>
 <body>
     <!-- Encabezado principal del sitio -->
-    <header class="main-header">
-        <div class="container">
+    <header class="encabezado-principal">
+        <div class="contenedor">
             <!-- Logo de la marca -->
-            <a href="index.html" class="brand-logo">
+            <a href="index.html" class="logo-marca">
                 <img src="images/logo.png" alt="Dino-Bake Logo" width="120">
             </a>
             
             <!-- Navegación principal -->
-            <nav class="main-nav">
-                <ul class="nav-list">
-                    <li class="nav-item">
-                        <a href="emprendedores.html" class="nav-link">
-                            <img src="images/emprendedor.png" alt="Emprendedores" class="nav-icon">
+            <nav class="navegacion-principal">
+                <ul class="lista-navegacion">
+                    <li class="item-navegacion">
+                        <a href="emprendedores.html" class="enlace-navegacion">
+                            <img src="images/emprendedor.png" alt="Emprendedores" class="icono-navegacion">
                             <span>Emprendedores</span>
                         </a>
                     </li>
                     
-                    <li class="nav-item">
-                        <a href="carrito.html" class="nav-link">
-                            <img src="images/carrito.png" alt="Carrito" class="nav-icon">
+                    <li class="item-navegacion">
+                        <a href="carrito.html" class="enlace-navegacion">
+                            <img src="images/carrito.png" alt="Carrito" class="icono-navegacion">
                             <span>Carrito</span>
                         </a>
                     </li>
 
-                    <li class="nav-item">
-                        <a href="contacto.html" class="nav-link">
-                            <img src="images/contacto.png" alt="Contacto" class="nav-icon">
+                    <li class="item-navegacion">
+                        <a href="contacto.html" class="enlace-navegacion">
+                            <img src="images/contacto.png" alt="Contacto" class="icono-navegacion">
                             <span>Contáctanos</span>
                         </a>
                     </li>
                 </ul>
             </nav>
             
-            <a href="perfil.html" class="user-profile">
+            <a href="perfil.html" class="perfil-usuario">
                 <img src="images/emprendedor.png" alt="usuario">
             </a>
         </div>
     </header>
     
     <!-- Contenido principal de la página -->
-    <main class="main-content">
-        <section class="page-header">
-            <div class="container">
-                <h1 class="page-title">Mi Carrito</h1>
+    <main class="contenido-principal">
+        <section class="encabezado-pagina">
+            <div class="contenedor">
+                <h1 class="titulo-pagina">Mi Carrito</h1>
             </div>
         </section>
 
         <!-- Sección del carrito -->
-        <section class="cart-section">
-            <div class="container">
+        <section class="seccion-carrito">
+            <div class="contenedor">
                 <div id="contenido-carrito">
                     <!-- Mensaje cuando está vacío -->
-                    <div id="carrito-vacio" class="cart-empty">
+                    <div id="carrito-vacio" class="carrito-vacio">
                         <h2>Tu carrito está vacío</h2>
                         <p>¡Añade algunos productos!</p>
-                        <a href="emprendedores.html" class="btn primary-btn">Ver emprendedores</a>
+                        <a href="emprendedores.html" class="boton boton-principal">Ver emprendedores</a>
                     </div>
                     
                     <!-- Contenido cuando hay productos -->
                     <div id="carrito-con-productos" style="display: none;">
-                        <div class="cart-items" id="lista-carrito">
+                        <div class="articulos-carrito" id="lista-carrito">
                             <!-- Los productos del carrito se insertarán aquí -->
                         </div>
                         
-                        <div class="cart-summary">
-                            <div class="summary-row">
+                        <div class="resumen-carrito">
+                            <div class="fila-resumen">
                                 <span>Subtotal:</span>
                                 <span id="subtotal">$0.00</span>
                             </div>
-                            <div class="summary-row">
+                            <div class="fila-resumen">
                                 <span>Envío:</span>
                                 <span id="envio">$0.00</span>
                             </div>
-                            <div class="summary-row total">
+                            <div class="fila-resumen total">
                                 <span>Total:</span>
                                 <span id="total">$0.00</span>
                             </div>
                             
-                            <div class="cart-actions">
-                                <button id="proceder-pago" class="btn primary-btn">Proceder al Pago</button>
+                            <div class="acciones-carrito">
+                                <button id="proceder-pago" class="boton boton-principal">Proceder al Pago</button>
                             </div>
                         </div>
                     </div>
@@ -98,25 +98,6 @@
             </div>
         </section>
     </main>
-
-    <script src="../js/auth.js"></script>
     <script src="../js/carrito.js"></script>
-    <script>
-        // Mostrar información del usuario
-        document.addEventListener('DOMContentLoaded', function() {
-            const usuario = JSON.parse(sessionStorage.getItem('currentUser'));
-            if (usuario) {
-                document.getElementById('nombre-usuario').textContent = usuario.nombre;
-            }
-            
-            // Actualizar contador del carrito
-            actualizarContadorCarrito();
-        });
-        
-        function actualizarContadorCarrito() {
-            const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
-            document.getElementById('contador-carrito').textContent = carrito.length;
-        }
-    </script>
 </body>
 </html>

@@ -1,23 +1,23 @@
 /* Variables CSS reutilizables para colores y estilos */
 :root {
-  --primary-color: #478ac9;       /* Color azul principal */
-  --secondary-color: #f8f9fa;     /* Color de fondo claro */
-  --text-color: #333;             /* Color de texto principal */
-  --light-gray: #e9ecef;          /* Gris claro para bordes/fondos */
-  --white: #fff;                  /* Blanco puro */
+  --color-primario: #478ac9;       /* Color azul principal */
+  --color-secundario: #f8f9fa;     /* Color de fondo claro */
+  --color-texto: #333;             /* Color de texto principal */
+  --gris-claro: #e9ecef;          /* Gris claro para bordes/fondos */
+  --blanco: #fff;                  /* Blanco puro */
 }
 
 /* Estilos base para toda la página */
 body {
-  font-family: 'Roboto', sans-serif;  /* Fuente principal */
-  color: var(--text-color);
-  line-height: 1.6;                  /* Espaciado entre líneas */
+  font-family: 'Roboto', sans-serif;
+  color: var(--color-texto);
+  line-height: 1.6;
   margin: 0;
   padding: 0;
 }
 
 /* Contenedor principal que centra el contenido */
-.container {
+.contenedor {
   width: 90%;                     
   max-width: 1200px;              
   margin: 0 auto;                 
@@ -25,216 +25,214 @@ body {
 }
 
 /* ----- Estilos del encabezado ----- */
-.main-header {
-  background-color: var(--white);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);  /* Sombra sutil */
-  position: sticky;                /* Encabezado fijo */
+.encabezado-principal {
+  background-color: var(--blanco);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: sticky;
   top: 0;
-  z-index: 100;                    /* Asegura que esté sobre otros elementos */
+  z-index: 100;
 }
 
 /* Flexbox para alinear logo, navegación y perfil */
-.main-header .container {
+.encabezado-principal .contenedor {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 /* Estilos del logo */
-.brand-logo img {
+.logo-marca img {
   height: auto;                
   width: 120px;                   
 }
 
 /* Estilos de la barra de navegación */
-.main-nav .nav-list {
+.navegacion-principal .lista-navegacion {
   display: flex;
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 30px;                      /* Espacio entre elementos */
+  gap: 30px;
 }
 
 /* Estilos de los enlaces de navegación */
-.nav-link {
+.enlace-navegacion {
   display: flex;
   align-items: center;
   text-decoration: none;
-  color: var(--text-color);
+  color: var(--color-texto);
   font-weight: 500;
   padding: 8px 0;
-  transition: color 0.3s;         /* Al pasar el ratón cambia leve de color*/
+  transition: color 0.3s;
 }
 
 /* Efecto hover y estado activo */
-.nav-link:hover {
-  color: var(--primary-color);
+.enlace-navegacion:hover {
+  color: var(--color-primario);
 }
 
 /* Iconos de navegación */
-.nav-icon {
+.icono-navegacion {
   width: 20px;
   height: 20px;
-  margin-right: 8px;              /* Espacio entre icono y texto */
+  margin-right: 8px;
 }
 
 /* Perfil de usuario */
-.user-profile {
+.perfil-usuario {
   display: flex;
   align-items: center;
 }
 
 /* Enlace activo actual */
-.nav-link-active{
-  border-bottom: 2px solid var(--primary-color);
-  color: var(--primary);
+.enlace-navegacion-activo {
+  border-bottom: 2px solid var(--color-primario);
+  color: var(--color-primario);
 }
 
-.user-avatar {
+.avatar-usuario {
   width: 40px;
   height: 40px;
-  border-radius: 50%;             /* Círculo perfecto */
-  object-fit: cover;              /* Ajuste de imagen */
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 /* ----- Contenido principal ----- */
-.page-header {
-  background-color: #e2f0fd;      /* Fondo azul claro */
+.encabezado-pagina {
+  background-color: #e2f0fd;
   padding: 40px 0;
   text-align: center;
 }
 
 /* Título principal (letra bonita) */
-.page-title {
+.titulo-pagina {
   font-family: 'Lobster', cursive;
-  color: var(--primary-color);
+  color: var(--color-primario);
   margin: 0;
   font-size: 2.5rem;           
 }
 
 /* Sección del carrito */
-.cart-section {
+.seccion-carrito {
   padding: 40px 0;
 }
 
 /* Mensaje de carrito vacío */
-.cart-empty {
+.carrito-vacio {
   text-align: center;
   padding: 40px 0;
 }
 
 /* Mensaje de Tu carrito está vacío*/
-.cart-empty h2 {
+.carrito-vacio h2 {
   font-size: 1.8rem;
   margin-bottom: 10px;
-  color: var(--text-color);
+  color: var(--color-texto);
 }
 
 /* Mensaje de ¡Añade algunos productos!*/
-.cart-empty p {
+.carrito-vacio p {
   font-size: 1.1rem;
   margin-bottom: 25px;
   color: #666;                    
 }
 
 /* ----- Estilos de botones ----- */
-.btn {
+.boton {
   display: inline-block;
   padding: 10px 25px;
   border-radius: 4px;
   text-decoration: none;
   font-weight: 500;
-  transition: all 0.3s;           /* Al pasar el ratón cambia de color*/
+  transition: all 0.3s;
 }
 
 /* Botón primario (azul) */
-.primary-btn {
-  background-color: var(--primary-color);
-  color: var(--white);
-  border: 2px solid var(--primary-color);
+.boton-principal {
+  background-color: var(--color-primario);
+  color: var(--blanco);
+  border: 2px solid var(--color-primario);
 }
 
 /* Efecto hover: fondo transparente */
-.primary-btn:hover {
+.boton-principal:hover {
   background-color: transparent;
-  color: var(--primary-color);
+  color: var(--color-primario);
 }
 
 /* ----- Diseño responsivo ----- */
 @media (max-width: 768px) {
   /* Cambia a diseño vertical en móviles */
-  .main-header .container {
+  .encabezado-principal .contenedor {
       flex-direction: column;
       gap: 15px;
   }
   
   /* Reduce espacio entre items de navegación */
-  .main-nav .nav-list {
+  .navegacion-principal .lista-navegacion {
       gap: 10px;
   }
   
   /* Título más pequeño en móviles */
-  .page-title {
+  .titulo-pagina {
       font-size: 2rem;
   }
 }
 
-/* --- Añade esto al final de tu carrito.css actual --- */
-
-/* Estilos para el carrito con productos */
-.cart-items {
+/* --- Estilos para el carrito con productos --- */
+.articulos-carrito {
   margin-bottom: 30px;
 }
 
-.cart-item {
+.articulo-carrito {
   display: flex;
   padding: 20px 0;
-  border-bottom: 1px solid var(--light-gray);
+  border-bottom: 1px solid var(--gris-claro);
   gap: 20px;
   align-items: flex-start;
 }
 
-.item-image {
+.imagen-articulo {
   width: 100px;
   flex-shrink: 0;
 }
 
-.item-image img {
+.imagen-articulo img {
   width: 100%;
   border-radius: 8px;
-  border: 1px solid var(--light-gray);
+  border: 1px solid var(--gris-claro);
 }
 
-.item-details {
+.detalles-articulo {
   flex-grow: 1;
 }
 
-.item-title {
+.titulo-articulo {
   margin: 0 0 5px;
   font-size: 1.1rem;
-  color: var(--text-color);
+  color: var(--color-texto);
 }
 
-.item-seller {
+.vendedor-articulo {
   margin: 0 0 10px;
   font-size: 0.9rem;
   color: #666;
 }
 
-.item-price {
+.precio-articulo {
   margin: 0 0 15px;
   font-weight: 500;
-  color: var(--primary-color);
+  color: var(--color-primario);
 }
 
-.item-quantity {
+.cantidad-articulo {
   display: flex;
   align-items: center;
   margin-bottom: 15px;
 }
 
-.item-quantity button {
-  background: var(--light-gray);
+.cantidad-articulo button {
+  background: var(--gris-claro);
   border: none;
   width: 30px;
   height: 30px;
@@ -247,114 +245,115 @@ body {
   transition: background 0.3s;
 }
 
-.item-quantity button:hover {
+.cantidad-articulo button:hover {
   background: #ddd;
 }
 
-.item-quantity span {
+.cantidad-articulo span {
   margin: 0 15px;
   min-width: 20px;
   text-align: center;
 }
 
-.item-total {
+.total-articulo {
   font-weight: 600;
-  color: var(--text-color);
+  color: var(--color-texto);
 }
 
-.item-remove {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 5px;
-  align-self: flex-start;
+.eliminar-producto {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
 }
 
-.item-remove img {
-  width: 18px;
-  opacity: 0.6;
-  transition: opacity 0.3s;
-}
-
-.item-remove:hover img {
-  opacity: 1;
+.eliminar-producto:hover {
+    background-color: #c0392b;
 }
 
 /* Resumen del pedido */
-.cart-summary {
-  background: var(--secondary-color);
+.resumen-carrito {
+  background: var(--color-secundario);
   padding: 25px;
   border-radius: 8px;
   margin-top: 30px;
 }
 
-.summary-row {
+.fila-resumen {
   display: flex;
   justify-content: space-between;
   margin-bottom: 15px;
   padding-bottom: 15px;
-  border-bottom: 1px solid var(--light-gray);
+  border-bottom: 1px solid var(--gris-claro);
 }
 
-.summary-row.total {
+.fila-resumen.total {
   font-size: 1.2rem;
   font-weight: 600;
   border-bottom: none;
   margin-bottom: 25px;
-  color: var(--primary-color);
+  color: var(--color-primario);
 }
 
-.cart-actions {
+.acciones-carrito {
   display: flex;
   justify-content: space-between;
   gap: 15px;
 }
 
-.secondary-btn {
-  background: var(--light-gray);
-  color: var(--text-color);
+.boton-secundario {
+  background: var(--gris-claro);
+  color: var(--color-texto);
   border: none;
   cursor: pointer;
   font-weight: 500;
   padding: 12px 25px;
 }
 
-.secondary-btn:hover {
+.boton-secundario:hover {
   background: #ddd;
 }
 
-/* Contador del carrito en el nav */
-#contador-carrito {
-  background: var(--primary-color);
-  color: var(--white);
-  border-radius: 50%;
-  padding: 2px 6px;
-  font-size: 0.75rem;
-  margin-left: 5px;
+
+/* Contenedor de cada producto en el carrito */
+.producto-carrito {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
 }
 
-/* Transición para mostrar/ocultar el carrito */
-#carrito-con-productos {
-  transition: opacity 0.3s ease;
+/* Imagen del producto */
+.producto-carrito img.imagen-producto {
+    max-width: 100px;
+    height: auto;
+    border-radius: 6px;
 }
+
 
 /* Estilos responsivos */
 @media (max-width: 768px) {
-  .cart-item {
+  .articulo-carrito {
     flex-direction: column;
     gap: 15px;
   }
   
-  .item-image {
+  .imagen-articulo {
     width: 100%;
     max-width: 200px;
   }
   
-  .cart-actions {
+  .acciones-carrito {
     flex-direction: column;
   }
   
-  .secondary-btn, #proceder-pago {
+  .boton-secundario, #proceder-pago {
     width: 100%;
   }
 }

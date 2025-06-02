@@ -11,51 +11,51 @@
 </head>
 
 <body>
-    <header class="main-header">
-        <div class="container">
-            <a href="index.html" class="brand-logo">
+    <header class="cabecera-principal">
+        <div class="contenedor">
+            <a href="index.html" class="logo-marca">
                 <img src="images/logo.png" alt="Dino-Bake Logo" width="120">
             </a>
             
             <!-- MENÚ DE NAVEGACIÓN -->
-            <nav class="main-nav">
-                <ul class="nav-list">
-                    <li class="nav-item">
-                        <a href="emprendedores.html" class="nav-link">
-                            <img src="images/emprendedor.png" alt="Emprendedores" class="nav-icon">
+            <nav class="navegacion-principal">
+                <ul class="lista-navegacion">
+                    <li class="item-navegacion">
+                        <a href="emprendedores.html" class="enlace-navegacion">
+                            <img src="images/emprendedor.png" alt="Emprendedores" class="icono-navegacion">
                             <span>Emprendedores</span>
                         </a>
                     </li>
 
-                   <li class="nav-item">
-                        <a href="carrito.html" class="nav-link">
-                            <img src="images/carrito.png" alt="Carrito" class="nav-icon">
+                   <li class="item-navegacion">
+                        <a href="carrito.html" class="enlace-navegacion">
+                            <img src="images/carrito.png" alt="Carrito" class="icono-navegacion">
                             <span>Carrito</span>
                         </a>
                     </li>
 
-                    <li class="nav-item">
-                        <a href="contacto.html" class="nav-link">
-                            <img src="images/contacto.png" alt="Contacto" class="nav-icon">
+                    <li class="item-navegacion">
+                        <a href="contacto.html" class="enlace-navegacion">
+                            <img src="images/contacto.png" alt="Contacto" class="icono-navegacion">
                             <span>Contacto</span>
                         </a>
                     </li>
                 </ul>
             </nav>
-            <a href="perfil.html" class="user-profile">
+            <a href="perfil.html" class="perfil-usuario">
                 <img src="images/emprendedor.png" alt="usuario">
             </a>
         </div>
     </header>
     
     <!-- CONTENIDO PRINCIPAL -->
-    <main class="main-content">
-        <section class="hero-section">
-            <div class="container">
-                <div class="hero-content">
-                    <div class="hero-text">
+    <main class="contenido-principal">
+        <section class="seccion-hero">
+            <div class="contenedor">
+                <div class="contenido-hero">
+                    <div class="texto-hero">
                         <h1>Mapanche</h1> 
-                        <p class="hero-description">
+                        <p class="descripcion-hero">
                           Aquí no horneamos solo pan dulce… ¡horneamos momentos felices!
                         Cada pieza está hecha en casa, con recetas tradicionales, ingredientes de calidad y ese toque especial que solo se logra cuando se cocina con amor.
                         Suaves, esponjosos y llenos de sabor, nuestros panes dulces son perfectos para acompañar tu cafecito, compartir en familia o darte un antojo delicioso sin culpa.
@@ -64,116 +64,110 @@
                         </p>
                     </div>
                     <!-- Imagen principal -->
-                    <div class="hero-image">
-                        <img src="images/Mapanche.png" class="product-showcase">
+                    <div class="imagen-hero">
+                        <img src="images/Mapanche.png" class="mostrador-producto">
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- CATÁLOGO DE PRODUCTOS -->
-        <section class="catalog-section">
-            <div class="container">
-                <h2 class="section-title">Nuestros productos</h2> 
-                <div class="product-grid">
-                    <div class="product-card" data-id="concha001" data-nombre="concha" data-precio="10" data-emprendedor="Mapanche">
-                        <img src="images/concha.jpg" alt="concha" class="product-image">
-                        <div class="product-info">
+        <section class="seccion-catalogo">
+            <div class="contenedor">
+                <h2 class="titulo-seccion">Nuestros productos</h2> 
+                <div class="rejilla-productos">
+                    <div class="tarjeta-producto" data-id="concha001" data-nombre="Concha" data-precio="10" data-emprendedor="Mapanche">
+                        <img src="images/concha.jpg" alt="Concha" class="imagen-producto">
+                        <div class="info-producto">
                             <h3>Concha</h3>
-                            <p class="product-price">$10 c/u</p>
-                            <div class="quantity-controls">
-                                <button class="quantity-minus">-</button>
-                                <input type="number" value="1" min="1" class="quantity-input">
-                                <button class="quantity-plus">+</button>
+                            <p class="precio-producto">$10 c/u</p>
+                            <div class="controles-cantidad">
+                                <button class="restar-cantidad">-</button>
+                                <input type="number" value="1" min="1" class="entrada-cantidad">
+                                <button class="sumar-cantidad">+</button>
                             </div>
-                            <button class="btn add-to-cart">Añadir al carrito</button>
+                            <button class="btn agregar-carrito">Añadir al carrito</button>
                         </div>
                     </div>
 
-                    <div class="product-card" data-id="rol001" data-nombre="Rol" data-precio="10" data-emprendedor="Mapanche">
-                        <img src="images/rol.jpg" alt="Rol" class="product-image">
-                        <div class="product-info">
+                    <div class="tarjeta-producto" data-id="rol001" data-nombre="Rol" data-precio="10" data-emprendedor="Mapanche">
+                        <img src="images/rol.jpg" alt="Rol" class="imagen-producto">
+                        <div class="info-producto">
                             <h3>Rol</h3>
-                            <p class="product-price">$20 c/u</p>
-                            <div class="quantity-controls">
-                                <button class="quantity-minus">-</button>
-                                <input type="number" value="1" min="1" class="quantity-input">
-                                <button class="quantity-plus">+</button>
+                            <p class="precio-producto">$20 c/u</p>
+                            <div class="controles-cantidad">
+                                <button class="restar-cantidad">-</button>
+                                <input type="number" value="1" min="1" class="entrada-cantidad">
+                                <button class="sumar-cantidad">+</button>
                             </div>
-                            <button class="btn add-to-cart">Añadir al carrito</button>
+                            <button class="btn agregar-carrito">Añadir al carrito</button>
                         </div>
                     </div>
 
-                    <div class="product-card" data-id="donas001" data-nombre="donas" data-precio="20" data-emprendedor="Mapanche">
-                        <img src="images/donas.jpg" alt="donas" class="product-image">
-                        <div class="product-info">
+                    <div class="tarjeta-producto" data-id="donas001" data-nombre="Donas" data-precio="20" data-emprendedor="Mapanche">
+                        <img src="images/donas.jpg" alt="Donas" class="imagen-producto">
+                        <div class="info-producto">
                             <h3>Donas</h3>
-                            <p class="product-price">$20 c/u</p>
-                            <div class="quantity-controls">
-                                <button class="quantity-minus">-</button>
-                                <input type="number" value="1" min="1" class="quantity-input">
-                                <button class="quantity-plus">+</button>
+                            <p class="precio-producto">$20 c/u</p>
+                            <div class="controles-cantidad">
+                                <button class="restar-cantidad">-</button>
+                                <input type="number" value="1" min="1" class="entrada-cantidad">
+                                <button class="sumar-cantidad">+</button>
                             </div>
-                            <button class="btn add-to-cart">Añadir al carrito</button>
+                            <button class="btn agregar-carrito">Añadir al carrito</button>
                         </div>
                     </div>
 
-                    <div class="product-card" data-id="pay001" data-nombre="pay" data-precio="200" data-emprendedor="Mapanche">
-                        <img src="images/pay.jpg" alt="pay" class="product-image">
-                        <div class="product-info">
+                    <div class="tarjeta-producto" data-id="pay001" data-nombre="Pay" data-precio="200" data-emprendedor="Mapanche">
+                        <img src="images/pay.jpg" alt="Pay" class="imagen-producto">
+                        <div class="info-producto">
                             <h3>Pay de manzana</h3>
-                            <p class="product-price">$200 c/u</p>
-                            <div class="quantity-controls">
-                                <button class="quantity-minus">-</button>
-                                <input type="number" value="1" min="1" class="quantity-input">
-                                <button class="quantity-plus">+</button>
+                            <p class="precio-producto">$200 c/u</p>
+                            <div class="controles-cantidad">
+                                <button class="restar-cantidad">-</button>
+                                <input type="number" value="1" min="1" class="entrada-cantidad">
+                                <button class="sumar-cantidad">+</button>
                             </div>
-                            <button class="btn add-to-cart">Añadir al carrito</button>
+                            <button class="btn agregar-carrito">Añadir al carrito</button>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
 
         <!-- SECCIÓN DE PROCESO DE COMPRA -->
-        <section class="how-we-work">
-            <div class="container">
-                <h2 class="section-title">Cómo comprar</h2> 
-                <div class="process-steps">
+        <section class="como-trabajamos">
+            <div class="contenedor">
+                <h2 class="titulo-seccion">Cómo comprar</h2> 
+                <div class="pasos-proceso">
 
-                    <div class="step">
-                        <div class="step-number">1</div>
+                    <div class="paso">
+                        <div class="numero-paso">1</div>
                         <h3>Realiza tu pedido</h3>
                     </div>
                     
-                    <div class="step">
-                        <div class="step-number">2</div>
+                    <div class="paso">
+                        <div class="numero-paso">2</div>
                         <h3>Recibe confirmación</h3>
                     </div>
 
-                    <div class="step">
-                        <div class="step-number">3</div>
+                    <div class="paso">
+                        <div class="numero-paso">3</div>
                         <h3>Realiza el pago</h3>
                     </div>
 
-                    <div class="step">
-                        <div class="step-number">4</div>
+                    <div class="paso">
+                        <div class="numero-paso">4</div>
                         <h3>Se entrega</h3>
                     </div>
                 </div>
             </div>
             <!-- Botón de regreso -->
-            <div class="button-container">
-             <a href="emprendedores.html" class="simple-back-button">Regresar</a>
+            <div class="contenedor-boton">
+             <a href="emprendedores.html" class="boton-regreso-simple">Regresar</a>
             </div>
         </section>
     </main>
-    <script src="../js/auth.js"></script>
-        <script src="../js/catalogo.js"></script>
-        <script>
-        // Actualizar contador al cargar la página
-        document.addEventListener('DOMContentLoaded', actualizarContadorCarrito);
-    </script>
+    <script src="../js/catalogo.js"></script>
 </body>
 </html>

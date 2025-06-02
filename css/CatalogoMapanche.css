@@ -1,15 +1,22 @@
-/* Colores y variables globales */
+/* ======================= */
+/* Variables de color y estilos globales */
+/* ======================= */
 :root {
-  --primary: #ffdd00;         /* Amarillo principal de la marca */
-  --light-bg: #fff8c8;        /* Fondo amarillo claro */
-  --text: #000000;           /* Texto negro */
-  --white: #fff;             /* Blanco puro */
-  --gray: #e9ecef;           /* Gris muy claro para fondos */
-  --radius: 8px;             /* Bordes redondeados */
-  --shadow: 0 4px 6px rgba(6, 6, 6, 0.1);  /* Sombra suave */
+  --primary: #ead463; /* Color principal */
+  --light-bg: #fdffec; /* Fondo claro para secciones destacadas */
+  --text: #000000; /* Color principal del texto */
+  --text-light: #000000; /* Variante ligera del texto */
+  --white: #fff; /* Blanco */
+  --gray: #e9ecef; /* Gris claro */
+  --radius: 8px; /* Radio de borde estándar */
+  --shadow: 0 4px 6px rgba(6, 6, 6, 0.1); /* Sombra base */
+  --shadow-hover: 0 8px 15px rgba(0,0,0,0.15); /* Sombra en hover */
+  --transition: all 0.3s ease; /* Transición estándar */
 }
 
-/* Reset básico y tipografía */
+/* ======================= */
+/* Reset y estilos base */
+/* ======================= */
 body {
   font-family: 'Roboto', sans-serif;
   color: var(--text);
@@ -18,22 +25,25 @@ body {
   padding: 0;
 }
 
-/* Estilos para los títulos */
 h1, h2, h3 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
 }
 
-/* Contenedor principal centrado */
-.container {
+/* ======================= */
+/* Contenedor general */
+/* ======================= */
+.contenedor {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-/* Header fijo en la parte superior */
-.main-header {
+/* ======================= */
+/* Header principal */
+/* ======================= */
+.cabecera-principal {
   background-color: var(--white);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 15px 0;
@@ -42,118 +52,127 @@ h1, h2, h3 {
   z-index: 100;
 }
 
-/* Flexbox para alinear logo, navegación y perfil */
-.main-header .container {
+.cabecera-principal .contenedor {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-/* Logo de la marca */
-.brand-logo img {
+.logo-marca img {
   width: 120px;
-  height: auto; /* Mantiene proporciones */
+  height: auto;
 }
 
-/* MENÚ DE NAVEGACIÓN */
-.main-nav .nav-list {
+/* ======================= */
+/* Navegación principal */
+/* ======================= */
+.navegacion-principal .lista-navegacion {
   display: flex;
-  list-style: none; /* Elimina viñetas */
+  list-style: none;
   margin: 0;
   padding: 0;
-  gap: 30px; /* Espacio entre elementos */
+  gap: 30px;
 }
 
-/* Elementos del menú */
-.nav-link {
+.item-navegacion {
+  list-style: none;
+}
+
+.enlace-navegacion {
   display: flex;
   align-items: center;
-  text-decoration: none; /* Sin subrayado */
+  text-decoration: none;
   color: var(--text);
   font-weight: 500;
-  transition: var(--transition); /* Transición suave */
+  transition: var(--transition);
 }
 
-/* Efecto hover en enlaces */
-.nav-link:hover {
+.enlace-navegacion:hover {
   color: var(--primary);
 }
 
-/* Iconos del menú */
-.nav-icon {
+.enlace-navegacion.active {
+  border-bottom: 2px solid var(--primary);
+  color: var(--primary);
+}
+
+.icono-navegacion {
   width: 20px;
   height: 20px;
-  margin-right: 8px; /* Espacio entre icono y texto */
+  margin-right: 8px;
 }
 
-/* PERFIL DE USUARIO */
-.user-avatar {
+/* ======================= */
+/* Perfil de usuario */
+/* ======================= */
+.perfil-usuario {
+  display: flex;
+  align-items: center;
+}
+
+.avatar-usuario {
   width: 40px;
   height: 40px;
-  border-radius: 50%; /* Forma circular */
-  object-fit: cover; /* Ajuste de imagen */
+  border-radius: 50%;
+  object-fit: cover;
 }
 
-/* SECCIÓN HERO */
-.hero-section {
+/* ======================= */
+/* Sección principal (Hero) */
+/* ======================= */
+.seccion-hero {
   background: var(--light-bg);
   padding: 80px 0;
 }
 
-/* Contenido flexible para hero */
-.hero-content {
+.contenido-hero {
   display: flex;
   align-items: center;
-  gap: 60px; /* Espacio entre texto e imagen */
+  gap: 60px;
 }
 
-/* Texto hero */
-.hero-text {
-  flex: 1; /* Ocupa espacio disponible */
+.texto-hero {
+  flex: 1;
 }
 
-/* Imagen hero */
-.hero-image {
-  flex: 1; /* Ocupa espacio disponible */
+.imagen-hero {
+  flex: 1;
 }
 
-/* Título hero */
-.hero-title {
+.titulo-hero {
   font-size: 2.5rem;
   margin-bottom: 20px;
   line-height: 1.2;
 }
 
-/* Descripción hero */
-.hero-description {
+.descripcion-hero {
   color: var(--text-light);
   margin-bottom: 25px;
   font-size: 1.1rem;
 }
 
-/* Imagen de producto */
-.product-showcase {
+.mostrador-producto {
   width: 100%;
   max-width: 500px;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
 }
 
-/* SECCIÓN DE CATÁLOGO */
-.catalog-section {
+/* ======================= */
+/* Catálogo de productos */
+/* ======================= */
+.seccion-catalogo {
   padding: 80px 0;
 }
 
-/* Título de sección con decoración */
-.section-title {
+.titulo-seccion {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 50px;
   position: relative;
 }
 
-/* Línea decorativa bajo el título */
-.section-title::after {
+.titulo-seccion::after {
   content: "";
   display: block;
   width: 80px;
@@ -162,50 +181,48 @@ h1, h2, h3 {
   margin: 15px auto 0;
 }
 
-/* CUADRÍCULA DE PRODUCTOS */
-.product-grid {
+.rejilla-productos {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Diseño responsive */
-  gap: 30px; /* Espacio entre productos */
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
 }
 
-/* TARJETA DE PRODUCTO */
-.product-card {
+.tarjeta-producto {
   background: var(--white);
   border-radius: var(--radius);
-  overflow: hidden; /* Contiene la imagen */
+  overflow: hidden;
   box-shadow: var(--shadow);
-  transition: var(--transition); /* Efecto hover suave */
+  transition: var(--transition);
 }
 
-/* Efecto hover en tarjeta */
-.product-card:hover {
-  transform: translateY(-5px); /* Levanta ligeramente */
-  box-shadow: var(--shadow-hover); /* Sombra más pronunciada */
+.tarjeta-producto:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
 }
 
-/* Imagen del producto */
-.product-image {
+.imagen-producto {
   width: 100%;
-  height: 250px;
-  object-fit: cover; /* Ajuste de imagen */
+  height: 380px;
+  object-fit: cover;
 }
 
-/* Información del producto */
-.product-info {
+.info-producto {
   padding: 20px;
 }
 
-/* Precio del producto */
-.product-price {
+.nombre-producto {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.precio-producto {
   font-size: 1.3rem;
   font-weight: 700;
   color: var(--primary);
   margin-bottom: 15px;
 }
 
-/* BOTÓN AÑADIR AL CARRITO */
-.add-to-cart {
+.agregar-carrito {
   width: 100%;
   padding: 12px;
   font-size: 1rem;
@@ -217,30 +234,29 @@ h1, h2, h3 {
   transition: var(--transition);
 }
 
-/* Efecto hover en botón */
-.add-to-cart:hover {
+.agregar-carrito:hover {
   background: var(--white);
   color: var(--primary);
   border: 1px solid var(--primary);
 }
 
-/* SECCIÓN PROCESO DE COMPRA */
-.how-we-work {
+/* ======================= */
+/* Proceso de compra */
+/* ======================= */
+.como-trabajamos {
   background: var(--light-bg);
   padding: 80px 0;
 }
 
-/* Pasos del proceso */
-.process-steps {
+.pasos-proceso {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Diseño responsive */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 30px;
   max-width: 900px;
-  margin: 0 auto; /* Centrado */
+  margin: 0 auto;
 }
 
-/* Paso individual */
-.step {
+.paso {
   background: var(--white);
   padding: 30px 20px;
   border-radius: var(--radius);
@@ -248,70 +264,70 @@ h1, h2, h3 {
   box-shadow: var(--shadow);
 }
 
-/* Número del paso */
-.step-number {
+.numero-paso {
   font-size: 2rem;
   font-weight: 700;
   color: var(--primary);
   margin-bottom: 15px;
 }
 
-/* CONTENEDOR DE BOTÓN */
-.button-container {
-    text-align: center; /* Centrado */
-    margin: 50px 0 20px; /* Márgenes */
+/* ======================= */
+/* Botón de regreso */
+/* ======================= */
+.contenedor-boton {
+  text-align: center;
+  margin: 50px 0 20px;
 }
 
-/* BOTÓN DE REGRESO */
-.simple-back-button {
-    padding: 10px 90px;
-    background-color:var(--primary);
-    color: white;
-    text-decoration: none;
-    border-radius: 4px;
-    font-size: 20px;
-    transition: background-color 0.2s;
+.boton-regreso-simple {
+  padding: 10px 90px;
+  background-color: var(--primary);
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 20px;
+  transition: background-color 0.2s;
 }
 
-/* MEDIA QUERIES (RESPONSIVE) */
+.boton-regreso-simple:hover {
+  background-color: var(--white);
+  color: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+/* ======================= */
+/* Estilos responsivos */
+/* ======================= */
 @media (max-width: 992px) {
-  /* Ajustes para tablet */
-  .hero-content {
-    flex-direction: column; /* Apila elementos */
+  .contenido-hero {
+    flex-direction: column;
     gap: 40px;
   }
-  
-  .hero-image {
-    order: -1; /* Mueve la imagen arriba */
+  .imagen-hero {
+    order: -1;
   }
 }
 
 @media (max-width: 768px) {
-  /* Ajustes para móvil grande */
-  .main-header .container {
-    flex-direction: column; /* Apila elementos del header */
+  .cabecera-principal .contenedor {
+    flex-direction: column;
     gap: 20px;
   }
-  
-  .main-nav .nav-list {
+  .navegacion-principal .lista-navegacion {
     gap: 15px;
-    flex-wrap: wrap; /* Permite que los elementos del menú se ajusten */
+    flex-wrap: wrap;
     justify-content: center;
   }
-  
-  .hero-title {
-    font-size: 2rem; /* Reduce tamaño de título */
+  .titulo-hero {
+    font-size: 2rem;
   }
 }
 
 @media (max-width: 576px) {
-  /* Ajustes para móvil pequeño */
-  .process-steps {
-    grid-template-columns: 1fr; /* Una columna */
+  .pasos-proceso {
+    grid-template-columns: 1fr;
   }
-  
-  /* Reduce padding en secciones */
-  .hero-section, .catalog-section, .how-we-work {
+  .seccion-hero, .seccion-catalogo, .como-trabajamos {
     padding: 60px 0;
   }
 }
