@@ -1,10 +1,10 @@
 /* Estilos base y variables */
 :root {
-    --primary-color: #478ac9;
-    --secondary-color: #f8f9fa;
-    --text-color: #333;
-    --light-gray: #e9ecef;
-    --white: #fff;
+    --color-primario: #478ac9;
+    --color-secundario: #f8f9fa;
+    --color-texto: #333;
+    --gris-claro: #e9ecef;
+    --blanco: #fff;
 }
 
 * {
@@ -16,11 +16,11 @@
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    color: var(--text-color);
+    color: var(--color-texto);
     background-color: #fff;
 }
 
-.container {
+.contenedor {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
@@ -28,26 +28,26 @@ body {
 }
 
 /* --- Encabezado --- */
-.main-header {
-    background-color: var(--white);
+.cabecera-principal {
+    background-color: var(--blanco);
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     position: sticky;
     top: 0;
     z-index: 100;
 }
 
-.main-header .container {
+.cabecera-principal .contenedor {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.brand-logo img {
+.logo-marca img {
     height: auto;
     width: 120px;
 }
 
-.main-nav .nav-list {
+.navegacion-principal .lista-navegacion {
     display: flex;
     list-style: none;
     margin: 0;
@@ -55,37 +55,37 @@ body {
     gap: 30px;
 }
 
-.nav-link {
+.enlace-navegacion {
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: var(--text-color);
+    color: var(--color-texto);
     font-weight: 500;
     padding: 8px 0;
     transition: color 0.3s;
 }
 
-.nav-link:hover {
-    color: var(--primary-color);
+.enlace-navegacion:hover {
+    color: var(--color-primario);
 }
 
-.nav-link.active {
-    border-bottom: 2px solid var(--primary-color);
-    color: var(--primary-color);
+.enlace-navegacion.activo {
+    border-bottom: 2px solid var(--color-primario);
+    color: var(--color-primario);
 }
 
-.nav-icon {
+.icono-navegacion {
     width: 20px;
     height: 20px;
     margin-right: 8px;
 }
 
-.user-profile {
+.perfil-usuario {
     display: flex;
     align-items: center;
 }
 
-.user-avatar {
+.avatar-usuario {
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -93,37 +93,37 @@ body {
 }
 
 /* --- Contenido --- */
-.hero-banner {
+.banner-hero {
     background-color: #e2f0fd; /* Azul claro pastel */
     padding: 40px 0; 
     text-align: center;
     margin-bottom: 40px;
 }
 
-.hero-title {
+.titulo-hero {
     font-family: 'Lobster', cursive;
-    color: var(--primary-color);
+    color: var(--color-primario);
     font-size: 2.5rem;
     margin-bottom: 15px;
 }
 
-.hero-subtitle {
+.subtitulo-hero {
     font-size: 1.2rem;
     color: #666;
 }
 
-.entrepreneurs-section {
+.seccion-emprendedores {
     padding: 40px 0;
 }
 
-.section-title {
+.titulo-seccion {
     text-align: center;
     font-size: 2rem;
     margin-bottom: 10px;
     position: relative;
 }
 
-.section-title::after {
+.titulo-seccion::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -131,36 +131,36 @@ body {
     transform: translateX(-50%);
     width: 60px;
     height: 3px;
-    background-color: var(--primary-color);
+    background-color: var(--color-primario);
 }
 
-.section-description {
+.descripcion-seccion {
     text-align: center;
     color: #666;
     margin-bottom: 30px;
 }
 
 /*--*/
-.entrepreneurs-grid {
+.rejilla-emprendedores {
     display: grid;
     gap: 30px;
 }
 
-.entrepreneur-card {
+.tarjeta-emprendedor {
     display: flex;
     flex-direction: column;
-    background: var(--white);
+    background: var(--blanco);
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     overflow: hidden;
     transition: transform 0.3s;
 }
 
-.entrepreneur-card:hover {
+.tarjeta-emprendedor:hover {
     transform: translateY(-5px);
 }
 
-.card-image {
+.imagen-tarjeta {
     display: flex;
     justify-content: center; /* Centra horizontalmente */
     align-items: center; /* Centra verticalmente */
@@ -169,24 +169,25 @@ body {
     width: 100%; /* Ancho completo */
 }
 
-.card-image img {
+.imagen-tarjeta img {
     max-width: 100%; /* Máximo 80% del ancho del contenedor */
     max-height: 100%; /* Máximo 80% de la altura del contenedor */
     width: auto;
     height: auto;
     margin: auto; /* Refuerza el centrado */
 }
-.card-content {
+
+.contenido-tarjeta {
     padding: 20px;
 }
 
-.entrepreneur-name {
-    color: var(--primary-color);
+.nombre-emprendedor {
+    color: var(--color-primario);
     font-size: 1.5rem;
     margin-bottom: 10px;
 }
 
-.btn {
+.boton {
     display: inline-block;
     padding: 10px 25px;
     border-radius: 4px;
@@ -194,37 +195,37 @@ body {
     transition: all 0.3s;
 }
 
-.btn-primary {
-    background-color: var(--primary-color);
-    color: var(--white);
-    border: 2px solid var(--primary-color);
+.boton-principal {
+    background-color: var(--color-primario);
+    color: var(--blanco);
+    border: 2px solid var(--color-primario);
 }
 
-.btn-primary:hover {
+.boton-principal:hover {
     background-color: transparent;
-    color: var(--primary-color);
+    color: var(--color-primario);
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-    .main-header .container {
+    .cabecera-principal .contenedor {
         flex-direction: column;
         gap: 15px;
     }
     
-    .main-nav .nav-list {
+    .navegacion-principal .lista-navegacion {
         gap: 10px;
     }
     
-    .hero-title {
+    .titulo-hero {
         font-size: 2rem;
     }
     
-    .entrepreneur-card {
+    .tarjeta-emprendedor {
         flex-direction: column;
     }
     
-    .reverse-layout {
+    .diseño-invertido {
         flex-direction: column;
     }
 }

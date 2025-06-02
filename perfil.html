@@ -1,132 +1,145 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/perfil.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/perfil.css" />
     <title>Mi Perfil - See To Mall</title>
-    <link rel="icon" href="images/logo.png" type="image/png">
+    <link rel="icon" href="images/logo.png" type="image/png" />
     <!-- Letra bonita-->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Lobster&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Lobster&family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
 </head>
 <body>
     <!-- Barra de navegación superior (encabezado unificado) -->
-    <header class="main-header">
-        <div class="container">
-            <a href="index.html" class="brand-logo">
-                <img src="images/logo.png" alt="Dino-Bake Logo" width="120">
+    <header class="cabecera-principal">
+        <div class="contenedor">
+            <a href="index.html" class="logo-marca">
+                <img src="images/logo.png" alt="Dino-Bake Logo" width="120" />
             </a>
-            
-            <nav class="main-nav">
-                <ul class="nav-list">
-                    <li class="nav-item">
-                        <a href="emprendedores.html" class="nav-link">
-                            <img src="images/emprendedor.png" alt="Emprendedores" class="nav-icon">
+
+            <nav class="navegacion-principal">
+                <ul class="lista-navegacion">
+                    <li class="item-navegacion">
+                        <a href="emprendedores.html" class="enlace-navegacion">
+                            <img
+                              src="images/emprendedor.png"
+                              alt="Emprendedores"
+                              class="icono-navegacion"
+                            />
                             <span>Emprendedores</span>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a href="carrito.html" class="nav-link">
-                            <img src="images/carrito.png" alt="Carrito" class="nav-icon">
+                    <li class="item-navegacion">
+                        <a href="carrito.html" class="enlace-navegacion">
+                            <img src="images/carrito.png" alt="Carrito" class="icono-navegacion" />
                             <span>Carrito</span>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a href="contacto.html" class="nav-link active">
-                            <img src="images/contacto.png" alt="Contacto" class="nav-icon">
+                    <li class="item-navegacion">
+                        <a href="contacto.html" class="enlace-navegacion activo">
+                            <img src="images/contacto.png" alt="Contacto" class="icono-navegacion" />
                             <span>Contacto</span>
                         </a>
                     </li>
                 </ul>
             </nav>
-            
-            <div class="user-profile">
-                <img src="images/emprendedor.png" alt="Usuario" class="user-avatar">
+
+            <div class="perfil-usuario">
+                <img src="images/emprendedor.png" alt="Usuario" class="avatar-usuario" />
             </div>
         </div>
     </header>
 
     <!-- Título de la página -->
-    <section class="page-title">
-        <div class="container">
-            <h1 class="title">Mi Perfil</h1>
+    <section class="titulo-pagina">
+        <div class="contenedor">
+            <h1 class="titulo">Mi Perfil</h1>
         </div>
     </section>
 
     <!-- Contenido principal del perfil -->
-    <main class="profile-main">
-        <div class="container">
-            <div class="profile-content">
-                <div class="profile-picture-container">
-                    <img src="images/foto.png" alt="Foto de perfil" class="profile-picture" id="profilePicture">
-                    <input type="file" id="photoUpload" accept="image/*" style="display: none;">
-                    <button type="button" class="btn-change-photo" id="changePhotoBtn">Cambiar foto</button>
+    <main class="contenido-perfil">
+        <div class="contenedor">
+            <div class="contenido-perfil">
+                <div class="contenedor-foto-perfil">
+                    <img src="images/foto.png" alt="Foto de perfil" class="foto-perfil" id="fotoPerfil" />
+                    <input type="file" id="subirFoto" accept="image/*" style="display: none;" />
+                    <button type="button" class="boton-cambiar-foto" id="botonCambiarFoto">
+                        Cambiar foto
+                    </button>
                 </div>
-                
+
                 <!-- Formulario de perfil -->
-                <form class="profile-form" id="profileForm">
-                    <div class="form-group">
-                        <label for="firstName">Nombre(s)</label>
-                        <input type="text" id="firstName" name="firstName" required>
+                <form class="formulario-perfil" id="formularioPerfil">
+                    <div class="grupo-formulario">
+                        <label for="nombre">Nombre(s)</label>
+                        <input type="text" id="nombre" name="nombre" required />
                     </div>
-                    
-                    <div class="form-group">
-                        <label for="lastName">Apellidos</label>
-                        <input type="text" id="lastName" name="lastName" required>
+
+                    <div class="grupo-formulario">
+                        <label for="apellidos">Apellidos</label>
+                        <input type="text" id="apellidos" name="apellidos" required />
                     </div>
-                    
-                    <div class="form-group">
-                        <label for="phone">Teléfono</label>
-                        <input type="tel" id="phone" name="phone" required>
+
+                    <div class="grupo-formulario">
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono" required />
                     </div>
-                    
-                    <div class="form-group">
-                        <label for="email">Correo electrónico</label>
-                        <input type="email" id="email" name="email" required>
+
+                    <div class="grupo-formulario">
+                        <label for="correo">Correo electrónico</label>
+                        <input type="email" id="correo" name="correo" required />
                     </div>
-                    
-                    <div class="form-group">
-                        <label for="password">Contraseña</label>
-                        <input type="password" id="password" name="password" placeholder="Dejar en blanco para no cambiar">
+
+                    <div class="grupo-formulario">
+                        <label for="contrasena">Contraseña</label>
+                        <input
+                          type="password"
+                          id="contrasena"
+                          name="contrasena"
+                          placeholder="Dejar en blanco para no cambiar"
+                        />
                     </div>
-                    
-                    <div class="form-actions">
-                        <button type="submit" class="btn-save">Guardar cambios</button>
-                        <a href="emprendedores.html" class="btn-back">Regresar</a>
-                        <button type="button" class="btn-logout" id="logoutBtn">Salir</button>
+
+                    <div class="acciones-formulario">
+                        <a href="emprendedores.html" class="boton-regresar">Regresar</a>
+                        <button type="button" class="boton-salir" id="botonSalir">Salir</button>
                     </div>
                 </form>
             </div>
         </div>
     </main>
-    <script src="../js/auth.js"></script>
+
+    <!-- Script que contiene lógica de perfil (más completa) -->
+    <script src="../js/perfil.js"></script>
+
+    <!-- Script adicional para verificar sesión y cerrar sesión -->
     <script>
-        // Cargar datos del usuario al iniciar
-        document.addEventListener('DOMContentLoaded', function() {
-            const usuario = JSON.parse(sessionStorage.getItem('currentUser'));
-            if (usuario) {
-                // Llenar formulario con datos del usuario
-                document.getElementById('firstName').value = usuario.nombre || '';
-                document.getElementById('lastName').value = usuario.apellidos || '';
-                document.getElementById('phone').value = usuario.telefono || '';
-                document.getElementById('email').value = usuario.email || '';
-                
-                // Mostrar avatar si existe
-                if (usuario.avatar) {
-                    document.querySelector('.user-avatar').src = usuario.avatar;
-                    document.getElementById('profilePicture').src = usuario.avatar;
-                }
-            } else {
-                window.location.href = 'index.html';
+        document.addEventListener("DOMContentLoaded", () => {
+            // Verifica si hay un usuario logueado
+            const usuario = JSON.parse(localStorage.getItem("usuarioLogueado"));
+
+            // Si no hay usuario logueado, redirige al inicio
+            if (!usuario) {
+            window.location.href = "index.html";
+            return;
             }
-            
-            // Manejar el botón de salir
-            document.getElementById('logoutBtn').addEventListener('click', function() {
-                if (confirm('¿Estás seguro de que deseas salir?')) {
-                    cerrarSesion();
-                }
+
+            // Configura botón "Salir"
+            const botonSalir = document.getElementById("botonSalir");
+            botonSalir.addEventListener("click", () => {
+            // Elimina el usuario logueado del localStorage
+            localStorage.removeItem("usuarioLogueado");
+
+            // Redirige al inicio
+            window.location.href = "index.html";
             });
         });
     </script>
+
+    
 </body>
 </html>

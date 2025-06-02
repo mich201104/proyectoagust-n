@@ -1,91 +1,81 @@
-// catalogo.js - Adaptado para tu estructura
+// Esperamos a que el contenido del documento esté completamente cargado
+document.addEventListener('DOMContentLoaded', () => {
 
-document.addEventListener('DOMContentLoaded', function () {
-    // Manejar botones de cantidad
-    document.querySelectorAll('.quantity-minus').forEach(button => {
-        button.addEventListener('click', disminuirCantidad);
+    // Obtenemos todos los botones que tienen la clase 'agregar-carrito'
+    const botonesAgregar = document.querySelectorAll('.agregar-carrito');
+
+    // A cada botón le agregamos un evento para cuando se le haga clic
+    botonesAgregar.forEach(boton => {
+        boton.addEventListener('click', () => {
+            // Buscamos la tarjeta del producto más cercana al botón
+            const tarjeta = boton.closest('.tarjeta-producto');
+
+            // Sacamos los datos del producto desde los atributos de la tarjeta
+            const id = tarjeta.dataset.id; // ID del producto
+            const nombre = tarjeta.dataset.nombre; // Nombre del producto
+            const precio = parseFloat(tarjeta.dataset.precio); // Precio del producto
+            const emprendedor = tarjeta.dataset.emprendedor; // Emprendedor que lo vende
+            const cantidad = parseInt(tarjeta.querySelector('.entrada-cantidad').value); // Cantidad seleccionada
+            const imagen = tarjeta.querySelector('img.imagen-producto').src; // URL de la imagen del producto
+
+            // Creamos un objeto con todos los datos del producto
+            const producto = {
+                id,
+                nombre,
+                precio,
+                cantidad,
+                emprendedor,
+                imagen
+            };
+
+            // Obtenemos el carrito desde localStorage o un arreglo vacío si no hay nada
+            let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+
+            // Verificamos si el producto ya está en el carrito
+            const indexExistente = carrito.findIndex(item => item.id === id);
+
+            if (indexExistente !== -1) {
+                // Si ya está, solo aumentamos la cantidad
+                carrito[indexExistente].cantidad += cantidad;
+            } else {
+                // Si no está, lo agregamos al carrito
+                carrito.push(producto);
+            }
+
+            // Guardamos el carrito actualizado en localStorage
+            localStorage.setItem('carrito', JSON.stringify(carrito));
+
+            // Mostramos un mensaje al usuario
+            alert(`"${nombre}" ha sido añadido al carrito.`);
+        });
     });
 
-    document.querySelectorAll('.quantity-plus').forEach(button => {
-        button.addEventListener('click', aumentarCantidad);
+    // --------- Parte para los botones de sumar y restar cantidad ---------
+
+    // Obtenemos todos los botones de "+" para sumar cantidad
+    const botonesSumar = document.querySelectorAll('.sumar-cantidad');
+    // Obtenemos todos los botones de "-" para restar cantidad
+    const botonesRestar = document.querySelectorAll('.restar-cantidad');
+
+    // Agregamos el evento de clic a los botones de "+"
+    botonesSumar.forEach(boton => {
+        boton.addEventListener('click', () => {
+            // Buscamos el input que está al lado del botón
+            const input = boton.parentElement.querySelector('.entrada-cantidad');
+            // Aumentamos el valor del input en 1
+            input.value = parseInt(input.value) + 1;
+        });
     });
 
-    // Manejar botones de añadir al carrito
-    document.querySelectorAll('.add-to-cart').forEach(button => {
-        button.addEventListener('click', agregarAlCarrito);
+    // Agregamos el evento de clic a los botones de "-"
+    botonesRestar.forEach(boton => {
+        boton.addEventListener('click', () => {
+            // Buscamos el input que está al lado del botón
+            const input = boton.parentElement.querySelector('.entrada-cantidad');
+            // Disminuimos la cantidad solo si es mayor a 1
+            if (parseInt(input.value) > 1) {
+                input.value = parseInt(input.value) - 1;
+            }
+        });
     });
-
-    // Actualizar contador al cargar
-    actualizarContadorCarrito();
 });
-
-function disminuirCantidad(event) {
-    const input = event.target.nextElementSibling;
-    if (input.value > 1) {
-        input.value = parseInt(input.value) - 1;
-    }
-}
-
-function aumentarCantidad(event) {
-    const input = event.target.previousElementSibling;
-    input.value = parseInt(input.value) + 1;
-}
-
-function agregarAlCarrito(event) {
-    const productCard = event.target.closest('.product-card');
-    const cantidad = parseInt(productCard.querySelector('.quantity-input').value);
-    const precioTexto = productCard.querySelector('.product-price').textContent;
-    const precio = parseFloat(precioTexto.replace(/[^0-9.]/g, ''));
-
-    const producto = {
-        id: productCard.dataset.id,
-        nombre: productCard.dataset.nombre,
-        precio: precio,
-        emprendedor: productCard.dataset.emprendedor,
-        cantidad: cantidad,
-        imagen: productCard.querySelector('.product-image').src
-    };
-
-    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
-
-    // Verificar si el producto ya está en el carrito
-    const index = carrito.findIndex(item => item.id === producto.id);
-
-    if (index !== -1) {
-        // Actualizar cantidad si ya existe
-        carrito[index].cantidad += producto.cantidad;
-    } else {
-        // Agregar nuevo producto
-        carrito.push(producto);
-    }
-
-    localStorage.setItem('carrito', JSON.stringify(carrito));
-
-    // Feedback visual
-    mostrarFeedbackAgregado(productCard);
-    actualizarContadorCarrito();
-}
-
-function mostrarFeedbackAgregado(element) {
-    const feedback = document.createElement('div');
-    feedback.className = 'add-to-cart-feedback';
-    feedback.textContent = '¡Añadido!';
-    element.appendChild(feedback);
-
-    setTimeout(() => {
-        feedback.remove();
-    }, 2000);
-}
-
-function actualizarContadorCarrito() {
-    const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
-    const totalItems = carrito.reduce((total, item) => total + item.cantidad, 0);
-
-    document.querySelectorAll('.cart-count').forEach(span => {
-        span.textContent = totalItems;
-    });
-}
-
-// Hacer funciones disponibles globalmente
-window.agregarAlCarrito = agregarAlCarrito;
-window.actualizarContadorCarrito = actualizarContadorCarrito;

@@ -31,7 +31,7 @@ h1, h2, h3 {
 }
 
 /* Contenedor principal que centra el contenido */
-.container {
+.contenedor {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
@@ -39,7 +39,7 @@ h1, h2, h3 {
 }
 
 /* Header */
-.main-header {
+.encabezado-principal {
   background-color: #fff;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   padding: 15px 0;
@@ -48,34 +48,34 @@ h1, h2, h3 {
   z-index: 1000;
 }
 
-.header-content {
+.contenido-encabezado {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .logo img {
-  width: 120px; /* Cambiado a 120px */
-  height: auto; /* Mantiene proporción */
+  width: 120px;
+  height: auto;
 }
 
 /* Navegación */
-.main-nav {
+.navegacion-principal {
   position: relative;
 }
 
-.nav-list {
+.lista-navegacion {
   display: flex;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.nav-item {
+.item-navegacion {
   margin-left: 20px;
 }
 
-.nav-link {
+.enlace-navegacion {
   text-decoration: none;
   color: #333;
   font-weight: 500;
@@ -83,7 +83,7 @@ h1, h2, h3 {
   position: relative;
 }
 
-.nav-link:after {
+.enlace-navegacion:after {
   content: '';
   position: absolute;
   width: 0;
@@ -94,48 +94,48 @@ h1, h2, h3 {
   transition: width 0.3s ease;
 }
 
-.nav-link:hover:after,
-.nav-item.current .nav-link:after {
+.enlace-navegacion:hover:after,
+.item-navegacion.actual .enlace-navegacion:after {
   width: 100%;
 }
 
-/* ========= HERO SECTION ========= */
-.hero-section {
+/* ========= SECCIÓN HERO ========= */
+.seccion-hero {
   background: var(--light-bg);
   padding: 80px 0;
 }
 
 /* Contenedor flexible para texto e imagen */
-.hero-content {
+.contenido-hero {
   display: flex;
   align-items: center;
   gap: 60px;
 }
 
-.hero-text {
+.texto-hero {
   flex: 1;
 }
 
-.hero-image {
+.imagen-hero {
   flex: 1;
 }
 
 /* Título principal */
-.hero-title {
+h1 {
   font-size: 2.5rem;
   margin-bottom: 20px;
   line-height: 1.2;
 }
 
 /* Descripción */
-.hero-description {
+.descripcion-hero {
   color: var(--text-light);
   margin-bottom: 25px;
   font-size: 1.1rem;
 }
 
 /* Imagen destacada */
-.product-showcase {
+.mostrador-producto {
   width: 100%;
   max-width: 500px;
   border-radius: var(--radius);
@@ -143,94 +143,84 @@ h1, h2, h3 {
 }
 
 /* ========= CATÁLOGO ========= */
-.catalog-section {
+.seccion-catalogo {
   padding: 80px 0;
 }
 
 /* Título de sección con subrayado decorativo */
-.section-title {
+.titulo-seccion {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 50px;
   position: relative;
 }
 
+.titulo-seccion::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: var(--primary);
+  margin: 15px auto 0;
+}
+
 /* Grid de productos responsive */
-.product-grid {
+.rejilla-productos {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 30px;
 }
 
 /* Tarjeta de producto */
-.product-card {
+.tarjeta-producto {
   background: var(--white);
   border-radius: var(--radius);
   overflow: hidden;
   box-shadow: var(--shadow);
-  transition: var(--transition); /* Animación suave al hacer hover */
+  transition: var(--transition);
 }
 
 /* Efecto hover en tarjetas */
-.product-card:hover {
-  transform: translateY(-5px); /* Levanta ligeramente la tarjeta */
+.tarjeta-producto:hover {
+  transform: translateY(-5px);
   box-shadow: var(--shadow-hover);
 }
 
 /* Imagen del producto */
-.product-image {
+.imagen-producto {
   width: 100%;
   height: 250px;
-  object-fit: cover; /* Asegura que la imagen cubra el espacio */
+  object-fit: cover;
 }
 
 /* Contenedor de información del producto */
-.product-info {
+.info-producto {
   padding: 20px;
 }
 
 /* Nombre del producto */
-.product-name {
+.info-producto h3 {
   font-size: 1.2rem;
   margin-bottom: 10px;
 }
 
 /* Precio con color destacado */
-.product-price {
+.precio-producto {
   font-size: 1.3rem;
   font-weight: 700;
   color: var(--primary);
   margin-bottom: 15px;
 }
 
-/* Botón "Añadir al carrito" */
-.add-to-cart {
-  width: 100%;
-  padding: 12px;
-  font-size: 1rem;
-  cursor: pointer;
-  background: var(--primary);
-  color: white;
-  border: none;
-  border-radius: var(--radius);
-  transition: var(--transition);
-}
-
-/* Efecto hover del botón */
-.add-to-cart:hover {
-  background: var(--white);
-  color: var(--primary);
-  border: 1px solid var(--primary);
-}
 
 /* ========= PROCESO DE COMPRA ========= */
-.how-we-work {
+.como-trabajamos {
   background: var(--light-bg);
   padding: 80px 0;
 }
 
 /* Grid de pasos responsive */
-.process-steps {
+.pasos-proceso {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 30px;
@@ -239,7 +229,7 @@ h1, h2, h3 {
 }
 
 /* Estilo de cada paso */
-.step {
+.paso {
   background: var(--white);
   padding: 30px 20px;
   border-radius: var(--radius);
@@ -248,7 +238,7 @@ h1, h2, h3 {
 }
 
 /* Número del paso */
-.step-number {
+.numero-paso {
   font-size: 2rem;
   font-weight: 700;
   color: var(--primary);
@@ -256,11 +246,12 @@ h1, h2, h3 {
 }
 
 /* ========= BOTÓN DE REGRESO ========= */
-.button-container {
+.contenedor-boton {
     text-align: center;
     margin: 50px 0 20px;
 }
-.simple-back-button {
+
+.boton-simple-regreso {
     padding: 10px 90px;
     background-color: #478ac9;
     color: white;
@@ -270,49 +261,49 @@ h1, h2, h3 {
     transition: background-color 0.2s;
 }
 
-.simple-back-button:hover {
+.boton-simple-regreso:hover {
     background-color: #3a7ab9;
 }
 
-/* ========= Acomodar al tamaño ========= */
+/* ========= MEDIA QUERIES ========= */
 @media (max-width: 992px) {
   /* Cambia a diseño vertical en tablets */
-  .hero-content {
+  .contenido-hero {
     flex-direction: column;
     gap: 40px;
   }
   
-  .hero-image {
-    order: -1; /* Coloca la imagen arriba en móviles */
+  .imagen-hero {
+    order: -1;
   }
 }
 
 @media (max-width: 768px) {
   /* Ajustes para móviles */
-  .main-header .container {
+  .encabezado-principal .contenedor {
     flex-direction: column;
     gap: 20px;
   }
   
-  .main-nav .nav-list {
+  .navegacion-principal .lista-navegacion {
     gap: 15px;
     flex-wrap: wrap;
     justify-content: center;
   }
   
-  .hero-title {
+  h1 {
     font-size: 2rem;
   }
 }
 
 @media (max-width: 576px) {
   /* Un solo paso por línea en móviles pequeños */
-  .process-steps {
+  .pasos-proceso {
     grid-template-columns: 1fr;
   }
   
   /* Reducción de padding en móviles */
-  .hero-section, .catalog-section, .how-we-work {
+  .seccion-hero, .seccion-catalogo, .como-trabajamos {
     padding: 60px 0;
   }
 }

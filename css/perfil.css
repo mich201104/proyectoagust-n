@@ -1,15 +1,15 @@
 /* == ESTILOS BASE == */
 :root {
-  --primary-color: #478ac9;
-  --primary-dark: #3a76b0;
-  --white: #fff;
-  --light-gray: #f0f0f0;
-  --medium-gray: #e9ecef;
-  --dark-gray: #333;
-  --text-color: #333;
-  --text-light: #666;
-  --shadow: 0 2px 5px rgba(0,0,0,0.1);
-  --radius: 8px;
+  --color-primario: #478ac9;
+  --color-primario-oscuro: #3a76b0;
+  --blanco: #fff;
+  --gris-claro: #f0f0f0;
+  --gris-medio: #e9ecef;
+  --gris-oscuro: #333;
+  --color-texto: #333;
+  --texto-claro: #666;
+  --sombra: 0 2px 5px rgba(0,0,0,0.1);
+  --radio: 8px;
 }
 
 * {
@@ -21,11 +21,11 @@
 body {
   font-family: 'Roboto', sans-serif;
   line-height: 1.6;
-  color: var(--text-color);
+  color: var(--color-texto);
   background-color: #f5f5f5;
 }
 
-.container {
+.contenedor {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
@@ -33,58 +33,58 @@ body {
 }
 
 /* == ENCABEZADO == */
-.main-header {
-  background-color: var(--white);
-  box-shadow: var(--shadow);
+.cabecera-principal {
+  background-color: var(--blanco);
+  box-shadow: var(--sombra);
   position: sticky;
   top: 0;
   z-index: 1000;
   padding: 15px 0;
 }
 
-.main-header .container {
+.cabecera-principal .contenedor {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.brand-logo img {
+.logo-marca img {
   width: 120px; /* Tamaño unificado */
   height: auto;
 }
 
-.main-nav .nav-list {
+.navegacion-principal .lista-navegacion {
   display: flex;
   list-style: none;
   gap: 30px; /* Espaciado consistente */
 }
 
-.nav-link {
+.enlace-navegacion {
   display: flex;
   align-items: center;
   text-decoration: none;
-  color: var(--text-color);
+  color: var(--color-texto);
   font-weight: 500;
   padding: 8px 0;
   transition: color 0.3s;
 }
 
-.nav-link:hover {
-  color: var(--primary-color);
+.enlace-navegacion:hover {
+  color: var(--color-primario);
 }
 
-.nav-link.active {
-  color: var(--primary-color);
-  border-bottom: 2px solid var(--primary-color);
+.enlace-navegacion.activo {
+  color: var(--color-primario);
+  border-bottom: 2px solid var(--color-primario);
 }
 
-.nav-icon {
+.icono-navegacion {
   width: 20px;
   height: 20px;
   margin-right: 8px;
 }
 
-.user-avatar {
+.avatar-usuario {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -92,7 +92,7 @@ body {
 }
 
 /* === ESTILOS DE PERFIL === */
-.page-title {
+.titulo-pagina {
   background-color: #e8f0fe;
   padding: 30px 0;
   text-align: center;
@@ -100,40 +100,40 @@ body {
 }
 
 /* == TÍTULO === */
-.page-title .title {
+.titulo-pagina .titulo {
   font-family: 'Lobster', cursive;
   font-size: 2.5rem;
   color: #478ac9; /* Color azul idéntico a carrito/emprendedores */
   margin: 0;
 }
 
-.profile-main {
+.contenido-perfil {
   padding: 20px 0 40px;
 }
 
-.profile-content {
+.contenido-perfil {
   max-width: 800px;
   margin: 0 auto;
 }
 
-.profile-picture-container {
+.contenedor-foto-perfil {
   text-align: center;
   margin-bottom: 30px;
 }
 
-.profile-picture {
+.foto-perfil {
   width: 150px;
   height: 150px;
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid var(--primary-color);
+  border: 4px solid var(--color-primario);
   margin: 0 auto 15px;
   display: block;
 }
 
-.btn-change-photo {
-  background-color: var(--primary-color);
-  color: var(--white);
+.boton-cambiar-foto {
+  background-color: var(--color-primario);
+  color: var(--blanco);
   border: none;
   padding: 8px 16px;
   border-radius: 20px;
@@ -142,48 +142,48 @@ body {
   transition: all 0.3s;
 }
 
-.btn-change-photo:hover {
-  background-color: var(--primary-dark);
+.boton-cambiar-foto:hover {
+  background-color: var(--color-primario-oscuro);
 }
 
-.profile-form {
-  background: var(--white);
+.formulario-perfil {
+  background: var(--blanco);
   padding: 30px;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
 }
 
-.form-group {
+.grupo-formulario {
   margin-bottom: 20px;
 }
 
-.form-group label {
+.grupo-formulario label {
   display: block;
   margin-bottom: 8px;
   font-weight: 500;
 }
 
-.form-group input {
+.grupo-formulario input {
   width: 100%;
   padding: 12px 15px;
-  border: 1px solid var(--medium-gray);
-  border-radius: var(--radius);
+  border: 1px solid var(--gris-medio);
+  border-radius: var(--radio);
   font-size: 1rem;
 }
 
-.form-group input:focus {
+.grupo-formulario input:focus {
   outline: none;
-  border-color: var(--primary-color);
+  border-color: var(--color-primario);
   box-shadow: 0 0 0 3px rgba(71, 138, 201, 0.2);
 }
 
-.form-actions {
+.acciones-formulario {
   display: flex;
   gap: 15px;
   margin-top: 30px;
 }
 
-.btn-save, .btn-back {
+.boton-guardar, .boton-regresar {
   padding: 12px 25px;
   border-radius: 25px;
   font-size: 1rem;
@@ -193,30 +193,29 @@ body {
   text-align: center;
 }
 
-.btn-save {
-  background-color: var(--primary-color);
-  color: var(--white);
+.boton-guardar {
+  background-color: var(--color-primario);
+  color: var(--blanco);
   border: none;
 }
 
-.btn-save:hover {
-  background-color: var(--primary-dark);
+.boton-guardar:hover {
+  background-color: var(--color-primario-oscuro);
 }
 
-.btn-back {
-  background-color: var(--light-gray);
-  color: var(--text-color);
+.boton-regresar {
+  background-color: var(--gris-claro);
+  color: var(--color-texto);
   text-decoration: none;
   border: none;
 }
 
-.btn-back:hover {
+.boton-regresar:hover {
   background-color: #e0e0e0;
 }
 
-/*boton de salir*/
 /* Estilo para el botón de salir */
-.btn-logout {
+.boton-salir {
     background-color: #e74c3c;
     color: white;
     border: none;
@@ -229,20 +228,20 @@ body {
     margin-left: 10px;
 }
 
-.btn-logout:hover {
+.boton-salir:hover {
     background-color: #c0392b;
 }
 
 /* Ajustes para los botones de acciones */
-.form-actions {
+.acciones-formulario {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 10px;
 }
 
-.form-actions button,
-.form-actions a {
+.acciones-formulario button,
+.acciones-formulario a {
     flex: 1;
     min-width: 120px;
     text-align: center;
@@ -250,37 +249,37 @@ body {
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
-  .main-header .container {
+  .cabecera-principal .contenedor {
     flex-direction: column;
     gap: 15px;
   }
   
-  .main-nav .nav-list {
+  .navegacion-principal .lista-navegacion {
     flex-wrap: wrap;
     justify-content: center;
     gap: 15px;
   }
   
-  .form-actions {
+  .acciones-formulario {
     flex-direction: column;
   }
   
-  .profile-picture {
+  .foto-perfil {
     width: 120px;
     height: 120px;
   }
   
-  .page-title .title {
+  .titulo-pagina .titulo {
     font-size: 2rem;
   }
 }
 
 @media (max-width: 480px) {
-  .profile-form {
+  .formulario-perfil {
     padding: 20px;
   }
   
-  .nav-link {
+  .enlace-navegacion {
     font-size: 0.9rem;
   }
 }
