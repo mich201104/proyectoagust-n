@@ -1,81 +1,99 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Tienda de Productos</title>
-    <link rel="stylesheet" href="../css/subirproducto.css">
-    <!--Letra bonita-->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <!--Icono de más-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mi Tienda de Productos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="stylesheet" href="../css/subirproducto.css" />
 </head>
 <body>
-    <!-- Encabezado principal del sitio -->
-    <header class="main-header">
-        <div class="container">
-            <!-- Logo de la marca -->
-            <a href="index.html" class="brand-logo">
-                <img src="images/logo.png" alt="Dino-Bake Logo" width="120">
-            </a>
-            
-            <!-- Navegación principal -->
-            <nav class="main-nav">
-                <ul class="nav-list">
-                    <li class="nav-item">
-                        <a href="subirproducto.html" class="nav-link">
-                            <img src="images/emprendedor.png" alt="Emprendedores" class="nav-icon">
-                            <span>Subir productos</span>
-                        </a>
-                    </li>
-                   
-                    <li class="nav-item">
-                        <a href="#mis-productos" class="nav-link"> <!-- Agrega el #mis-productos -->
-                            <img src="images/contacto.png" alt="Contacto" class="nav-icon">
-                            <span>Ver mis productos</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            <a href="perfilemprendedor.html" class="user-profile">
-                <img src="images/emprendedor.png" alt="usuario">
-            </a>
-        </div>
-    </header>
+  <header class="encabezado-principal">
+    <div class="contenedor">
+      <a href="index.html" class="logo-marca">
+        <img src="images/logo.png" alt="Dino-Bake Logo" width="120" />
+      </a>
 
-    <main class="container">
-        <section class="product-form">
-            <h2><i class="fas fa-plus-circle"></i> Agregar Nuevo Producto</h2>
-            <form id="productForm">
-                <div class="form-group">
-                    <label for="productName">Nombre del Producto:</label>
-                    <input type="text" id="productName" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="productPrice">Precio:</label>
-                    <input type="number" id="productPrice" step="0.01" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="productDescription">Descripción:</label>
-                    <textarea id="productDescription" rows="3"></textarea>
-                </div>
-                
-                <div class="form-group">
-                    <label for="productImage">Imagen del Producto:</label>
-                    <input type="file" id="productImage" accept="image/*">
-                </div>
-                
-                <button type="submit" class="btn">Guardar Producto</button>
-            </form>
-        </section>
-        <!-- SECCIÓN DE MIS PRODUCTOS -->
-        <section class="my-products" id="mis-productos">
-            <h2><i class="fas fa-box-open"></i> Mis Productos</h2>
-            <div id="productos-lista"></div>
-        </section>
-    </main>
-    
+      <nav class="navegacion-principal">
+        <ul class="lista-navegacion">
+          <li class="item-navegacion">
+            <a href="subirproducto.html" class="enlace-navegacion">
+              <img src="images/emprendedor.png" alt="Emprendedores" class="icono-navegacion" />
+              <span>Subir productos</span>
+            </a>
+          </li>
+
+          <li class="item-navegacion">
+            <a href="#mis-productos" class="enlace-navegacion">
+              <img src="images/contacto.png" alt="Contacto" class="icono-navegacion" />
+              <span>Ver mis productos</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <a href="perfilemprendedor.html" class="perfil-usuario">
+        <img src="images/emprendedor.png" alt="usuario" />
+      </a>
+    </div>
+  </header>
+
+  <main class="contenedor">
+    <section class="formulario-producto">
+      <h2><i class="fas fa-plus-circle"></i> Agregar Nuevo Producto</h2>
+      <form id="formularioProducto">
+        <div class="grupo-formulario">
+          <label for="nombreProducto">Nombre del Producto:</label>
+          <input type="text" id="nombreProducto" required />
+        </div>
+
+        <div class="grupo-formulario">
+          <label for="precioProducto">Precio:</label>
+          <input type="number" id="precioProducto" step="0.01" required />
+        </div>
+
+        <div class="grupo-formulario">
+          <label for="imagenProducto">Imagen del Producto:</label>
+          <input type="file" id="imagenProducto" accept="image/*" />
+        </div>
+
+        <button type="submit" class="boton">Guardar Producto</button>
+      </form>
+    </section>
+
+    <!-- SECCIÓN DE MIS PRODUCTOS -->
+    <section class="mis-productos" id="mis-productos">
+      <h2><i class="fas fa-box-open"></i> Mis Productos</h2>
+      <div id="lista-productos"></div>
+    </section>
+  </main>
+
+  <!-- Modal para editar producto -->
+  <div id="modalEditar" class="modal">
+    <div class="modal-contenido">
+      <span id="cerrarModal" class="cerrar">&times;</span>
+      <h3>Editar Producto</h3>
+      <form id="formEditarProducto">
+        <div class="grupo-formulario">
+          <label for="editarNombre">Nombre del Producto:</label>
+          <input type="text" id="editarNombre" required />
+        </div>
+
+        <div class="grupo-formulario">
+          <label for="editarPrecio">Precio:</label>
+          <input type="number" id="editarPrecio" step="0.01" required />
+        </div>
+
+        <div class="grupo-formulario">
+          <label for="editarImagen">Cambiar Imagen (opcional):</label>
+          <input type="file" id="editarImagen" accept="image/*" />
+        </div>
+
+        <button type="submit" class="boton">Guardar Cambios</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/subirproducto.js"></script>
 </body>
 </html>

@@ -1,10 +1,10 @@
 /* Estilos base y variables */
 :root {
-    --primary-color: #478ac9;
-    --secondary-color: #f8f9fa;
-    --text-color: #333;
-    --light-gray: #e9ecef;
-    --white: #fff;
+    --color-primario: #478ac9;
+    --color-secundario: #f8f9fa;
+    --color-texto: #333;
+    --gris-claro: #e9ecef;
+    --blanco: #fff;
 }
 
 * {
@@ -16,19 +16,19 @@
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    color: var(--text-color);
+    color: var(--color-texto);
     background-color: #fff;
 }
 
-.container {
+.contenedor {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
 }
 
-/* Header */
-.main-header {
+/* Cabecera */
+.encabezado-principal {
   background-color: #fff;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   padding: 15px 0;
@@ -37,34 +37,34 @@ body {
   z-index: 1000;
 }
 
-.header-content {
+.contenido-encabezado {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .logo img {
-  width: 120px; /* Cambiado a 120px */
-  height: auto; /* Mantiene proporción */
+  width: 120px;
+  height: auto;
 }
 
 /* Navegación */
-.main-nav {
+.navegacion-principal {
   position: relative;
 }
 
-.nav-list {
+.lista-navegacion {
   display: flex;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.nav-item {
+.item-navegacion {
   margin-left: 20px;
 }
 
-.nav-link {
+.enlace-navegacion {
   text-decoration: none;
   color: #333;
   font-weight: 500;
@@ -72,7 +72,7 @@ body {
   position: relative;
 }
 
-.nav-link:after {
+.enlace-navegacion:after {
   content: '';
   position: absolute;
   width: 0;
@@ -83,43 +83,43 @@ body {
   transition: width 0.3s ease;
 }
 
-.nav-link:hover:after,
-.nav-item.current .nav-link:after {
+.enlace-navegacion:hover:after,
+.item-navegacion.actual .enlace-navegacion:after {
   width: 100%;
 }
 
 /* --- Contenido --- */
-.hero-banner {
-    background-color: #e2f0fd; /* Azul claro pastel */
+.banner-hero {
+    background-color: #e2f0fd;
     padding: 40px 0; 
     text-align: center;
     margin-bottom: 40px;
 }
 
-.hero-title {
+.titulo-hero {
     font-family: 'Lobster', cursive;
-    color: var(--primary-color);
+    color: var(--color-primario);
     font-size: 2.5rem;
     margin-bottom: 15px;
 }
 
-.hero-subtitle {
+.subtitulo-hero {
     font-size: 1.2rem;
     color: #666;
 }
 
-.entrepreneurs-section {
+.seccion-emprendedores {
     padding: 40px 0;
 }
 
-.section-title {
+.titulo-seccion {
     text-align: center;
     font-size: 2rem;
     margin-bottom: 10px;
     position: relative;
 }
 
-.section-title::after {
+.titulo-seccion::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -127,62 +127,63 @@ body {
     transform: translateX(-50%);
     width: 60px;
     height: 3px;
-    background-color: var(--primary-color);
+    background-color: var(--color-primario);
 }
 
-.section-description {
+.descripcion-seccion {
     text-align: center;
     color: #666;
     margin-bottom: 30px;
 }
 
 /*--*/
-.entrepreneurs-grid {
+.rejilla-emprendedores {
     display: grid;
     gap: 30px;
 }
 
-.entrepreneur-card {
+.tarjeta-emprendedor {
     display: flex;
     flex-direction: column;
-    background: var(--white);
+    background: var(--blanco);
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     overflow: hidden;
     transition: transform 0.3s;
 }
 
-.entrepreneur-card:hover {
+.tarjeta-emprendedor:hover {
     transform: translateY(-5px);
 }
 
-.card-image {
+.imagen-tarjeta {
     display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
+    justify-content: center;
+    align-items: center;
     background-color: #f8f9fa;
-    height: 200px; /* Altura fija del contenedor */
-    width: 100%; /* Ancho completo */
+    height: 200px;
+    width: 100%;
 }
 
-.card-image img {
-    max-width: 100%; /* Máximo 80% del ancho del contenedor */
-    max-height: 100%; /* Máximo 80% de la altura del contenedor */
+.imagen-tarjeta img {
+    max-width: 100%;
+    max-height: 100%;
     width: auto;
     height: auto;
-    margin: auto; /* Refuerza el centrado */
+    margin: auto;
 }
-.card-content {
+
+.contenido-tarjeta {
     padding: 20px;
 }
 
-.entrepreneur-name {
-    color: var(--primary-color);
+.nombre-emprendedor {
+    color: var(--color-primario);
     font-size: 1.5rem;
     margin-bottom: 10px;
 }
 
-.btn {
+.boton {
     display: inline-block;
     padding: 10px 25px;
     border-radius: 4px;
@@ -190,37 +191,37 @@ body {
     transition: all 0.3s;
 }
 
-.btn-primary {
-    background-color: var(--primary-color);
-    color: var(--white);
-    border: 2px solid var(--primary-color);
+.boton-principal {
+    background-color: var(--color-primario);
+    color: var(--blanco);
+    border: 2px solid var(--color-primario);
 }
 
-.btn-primary:hover {
+.boton-principal:hover {
     background-color: transparent;
-    color: var(--primary-color);
+    color: var(--color-primario);
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-    .main-header .container {
+    .encabezado-principal .contenedor {
         flex-direction: column;
         gap: 15px;
     }
     
-    .main-nav .nav-list {
+    .navegacion-principal .lista-navegacion {
         gap: 10px;
     }
     
-    .hero-title {
+    .titulo-hero {
         font-size: 2rem;
     }
     
-    .entrepreneur-card {
+    .tarjeta-emprendedor {
         flex-direction: column;
     }
     
-    .reverse-layout {
+    .diseño-invertido {
         flex-direction: column;
     }
 }

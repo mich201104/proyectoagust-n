@@ -30,15 +30,15 @@ h1 {
   margin-top: 0;
 }
 
-.container {
+.contenedor {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-/* Header */
-.site-header {
+/* Cabecera */
+.cabecera-sitio {
   background-color: var(--white);
   box-shadow: var(--shadow);
   padding: 15px 0;
@@ -47,7 +47,7 @@ h1 {
   z-index: 100;
 }
 
-.header-content {
+.contenido-cabecera {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -63,7 +63,7 @@ h1 {
   opacity: 0.9;
 }
 
-.main-nav ul {
+.navegacion-principal ul {
   display: flex;
   list-style: none;
   gap: 30px;
@@ -71,7 +71,7 @@ h1 {
   padding: 0;
 }
 
-.main-nav a {
+.navegacion-principal a {
   text-decoration: none;
   color: var(--text);
   font-weight: 500;
@@ -79,19 +79,19 @@ h1 {
   font-size: 16px;
 }
 
-.main-nav a:hover {
+.navegacion-principal a:hover {
   color: var(--primary);
 }
 
 /* Página de registro */
-.signup-page {
+.pagina-registro {
   padding: 60px 0;
   min-height: calc(100vh - 150px);
   display: flex;
   align-items: center;
 }
 
-.signup-container {
+.contenedor-registro {
   display: grid;
   grid-template-columns: 1fr 1fr;
   min-height: 600px;
@@ -101,13 +101,13 @@ h1 {
   background-color: var(--white);
 }
 
-.signup-image {
+.imagen-registro {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-.signup-form-container {
+.contenedor-formulario-registro {
   background-color: var(--light-bg);
   display: flex;
   align-items: center;
@@ -115,18 +115,18 @@ h1 {
   padding: 40px;
 }
 
-.signup-form-wrapper {
+.envoltorio-formulario-registro {
   width: 100%;
   max-width: 400px;
 }
 
-.signup-form-wrapper h1 {
+.envoltorio-formulario-registro h1 {
   text-align: center;
   margin-bottom: 30px;
 }
 
 /* Selector de tipo de cuenta */
-.account-type-selector {
+.selector-tipo-cuenta {
   display: flex;
   margin-bottom: 25px;
   border-radius: var(--radius);
@@ -134,7 +134,7 @@ h1 {
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.account-type-btn {
+.boton-tipo-cuenta {
   flex: 1;
   padding: 12px;
   border: none;
@@ -148,28 +148,28 @@ h1 {
   font-size: 15px;
 }
 
-.account-type-btn.active {
+.boton-tipo-cuenta.activo {
   background-color: var(--primary);
   color: var(--white);
 }
 
-.account-type-btn:not(.active):hover {
+.boton-tipo-cuenta:not(.activo):hover {
   background-color: var(--gray-dark);
 }
 
 /* Formulario */
-.signup-form {
+.formulario-registro {
   background-color: var(--white);
   padding: 30px;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
 }
 
-.form-group {
+.grupo-formulario {
   margin-bottom: 20px;
 }
 
-.form-group label {
+.grupo-formulario label {
   display: block;
   margin-bottom: 8px;
   font-weight: 500;
@@ -177,9 +177,9 @@ h1 {
   font-size: 14px;
 }
 
-.form-group input,
-.form-group textarea,
-.form-group select {
+.grupo-formulario input,
+.grupo-formulario textarea,
+.grupo-formulario select {
   width: 100%;
   padding: 12px 15px;
   border: 1px solid var(--gray);
@@ -190,8 +190,8 @@ h1 {
   box-sizing: border-box;
 }
 
-.form-group input:focus,
-.form-group textarea:focus {
+.grupo-formulario input:focus,
+.grupo-formulario textarea:focus {
   outline: none;
   border-color: var(--primary);
   box-shadow: 0 0 0 3px rgba(71, 138, 201, 0.2);
@@ -203,7 +203,7 @@ textarea {
 }
 
 /* Botones */
-.btn {
+.boton {
   display: inline-block;
   padding: 12px 30px;
   border: none;
@@ -216,21 +216,21 @@ textarea {
   text-align: center;
 }
 
-.btn-primary {
+.boton-principal {
   background-color: var(--primary);
   color: var(--white);
 }
 
-.btn-primary:hover {
+.boton-principal:hover {
   background-color: var(--primary-dark);
 }
 
-.button-container {
+.contenedor-boton {
   text-align: center;
   margin: 30px 0 20px;
 }
 
-.simple-back-button {
+.boton-regreso-simple {
   padding: 10px 90px;
   background-color: var(--primary);
   color: white;
@@ -241,56 +241,56 @@ textarea {
   display: inline-block;
 }
 
-.simple-back-button:hover {
+.boton-regreso-simple:hover {
   background-color: var(--primary-dark);
 }
 
 /* Animación para campos dinámicos */
-#entrepreneur-fields {
+#campos-emprendedor {
   transition: var(--transition);
   overflow: hidden;
 }
 
 /* Responsive */
 @media (max-width: 992px) {
-  .signup-container {
+  .contenedor-registro {
     grid-template-columns: 1fr;
   }
   
-  .signup-image {
+  .imagen-registro {
     display: none;
   }
   
-  .signup-form-container {
+  .contenedor-formulario-registro {
     padding: 30px;
   }
 }
 
 @media (max-width: 576px) {
-  .header-content {
+  .contenido-cabecera {
     flex-direction: column;
     gap: 15px;
   }
   
-  .main-nav ul {
+  .navegacion-principal ul {
     gap: 15px;
     flex-wrap: wrap;
     justify-content: center;
   }
   
-  .signup-form {
+  .formulario-registro {
     padding: 20px;
   }
   
-  .account-type-selector {
+  .selector-tipo-cuenta {
     flex-direction: column;
   }
   
-  .account-type-btn {
+  .boton-tipo-cuenta {
     padding: 10px;
   }
   
-  .simple-back-button {
+  .boton-regreso-simple {
     padding: 10px 40px;
     font-size: 16px;
   }
@@ -303,12 +303,12 @@ select:focus {
   transform: translateY(-1px);
 }
 
-.account-type-btn {
+.boton-tipo-cuenta {
   position: relative;
   overflow: hidden;
 }
 
-.account-type-btn::after {
+.boton-tipo-cuenta::after {
   content: '';
   position: absolute;
   top: 50%;
@@ -322,7 +322,7 @@ select:focus {
   transform-origin: 50% 50%;
 }
 
-.account-type-btn:focus:not(.active)::after {
+.boton-tipo-cuenta:focus:not(.activo)::after {
   animation: ripple 0.6s ease-out;
 }
 

@@ -33,7 +33,7 @@ h1, h2, h3 {
 /* ======================= */
 /* Contenedor general */
 /* ======================= */
-.container {
+.contenedor {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
@@ -43,7 +43,7 @@ h1, h2, h3 {
 /* ======================= */
 /* Header principal */
 /* ======================= */
-.main-header {
+.cabecera-principal {
   background-color: var(--white);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 15px 0;
@@ -52,13 +52,13 @@ h1, h2, h3 {
   z-index: 100; /* Asegura que quede encima */
 }
 
-.main-header .container {
+.cabecera-principal .contenedor {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.brand-logo img {
+.logo-marca img {
   width: 120px;
   height: auto;
 }
@@ -66,7 +66,7 @@ h1, h2, h3 {
 /* ======================= */
 /* Navegación principal */
 /* ======================= */
-.main-nav .nav-list {
+.navegacion-principal .lista-navegacion {
   display: flex;
   list-style: none;
   margin: 0;
@@ -74,11 +74,11 @@ h1, h2, h3 {
   gap: 30px;
 }
 
-.nav-item {
+.item-navegacion {
   list-style: none;
 }
 
-.nav-link {
+.enlace-navegacion {
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -87,16 +87,16 @@ h1, h2, h3 {
   transition: var(--transition);
 }
 
-.nav-link:hover {
+.enlace-navegacion:hover {
   color: var(--primary); /* Cambia color al pasar el mouse */
 }
 
-.nav-link.active {
+.enlace-navegacion.active {
   border-bottom: 2px solid var(--primary); /* Marca la página actual */
   color: var(--primary);
 }
 
-.nav-icon {
+.icono-navegacion {
   width: 20px;
   height: 20px;
   margin-right: 8px;
@@ -105,12 +105,12 @@ h1, h2, h3 {
 /* ======================= */
 /* Perfil de usuario */
 /* ======================= */
-.user-profile {
+.perfil-usuario {
   display: flex;
   align-items: center;
 }
 
-.user-avatar {
+.avatar-usuario {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -120,38 +120,38 @@ h1, h2, h3 {
 /* ======================= */
 /* Sección principal (Hero) */
 /* ======================= */
-.hero-section {
+.seccion-hero {
   background: var(--light-bg);
   padding: 80px 0;
 }
 
-.hero-content {
+.contenido-hero {
   display: flex;
   align-items: center;
   gap: 60px;
 }
 
-.hero-text {
+.texto-hero {
   flex: 1;
 }
 
-.hero-image {
+.imagen-hero {
   flex: 1;
 }
 
-.hero-title {
+.titulo-hero {
   font-size: 2.5rem;
   margin-bottom: 20px;
   line-height: 1.2;
 }
 
-.hero-description {
+.descripcion-hero {
   color: var(--text-light);
   margin-bottom: 25px;
   font-size: 1.1rem;
 }
 
-.product-showcase {
+.mostrador-producto {
   width: 100%;
   max-width: 500px;
   border-radius: var(--radius);
@@ -161,18 +161,18 @@ h1, h2, h3 {
 /* ======================= */
 /* Catálogo de productos */
 /* ======================= */
-.catalog-section {
+.seccion-catalogo {
   padding: 80px 0;
 }
 
-.section-title {
+.titulo-seccion {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 50px;
   position: relative;
 }
 
-.section-title::after {
+.titulo-seccion::after {
   content: "";
   display: block;
   width: 80px;
@@ -181,13 +181,13 @@ h1, h2, h3 {
   margin: 15px auto 0;
 }
 
-.product-grid {
+.rejilla-productos {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 30px;
 }
 
-.product-card {
+.tarjeta-producto {
   background: var(--white);
   border-radius: var(--radius);
   overflow: hidden;
@@ -195,34 +195,34 @@ h1, h2, h3 {
   transition: var(--transition);
 }
 
-.product-card:hover {
+.tarjeta-producto:hover {
   transform: translateY(-5px);
   box-shadow: var(--shadow-hover);
 }
 
-.product-image {
+.imagen-producto {
   width: 100%;
   height: 380px;
   object-fit: cover;
 }
 
-.product-info {
+.info-producto {
   padding: 20px;
 }
 
-.product-name {
+.nombre-producto {
   font-size: 1.2rem;
   margin-bottom: 10px;
 }
 
-.product-price {
+.precio-producto {
   font-size: 1.3rem;
   font-weight: 700;
   color: var(--primary);
   margin-bottom: 15px;
 }
 
-.add-to-cart {
+.agregar-carrito {
   width: 100%;
   padding: 12px;
   font-size: 1rem;
@@ -234,7 +234,7 @@ h1, h2, h3 {
   transition: var(--transition);
 }
 
-.add-to-cart:hover {
+.agregar-carrito:hover {
   background: var(--white);
   color: var(--primary);
   border: 1px solid var(--primary);
@@ -243,12 +243,12 @@ h1, h2, h3 {
 /* ======================= */
 /* Proceso de compra */
 /* ======================= */
-.how-we-work {
+.como-trabajamos {
   background: var(--light-bg);
   padding: 80px 0;
 }
 
-.process-steps {
+.pasos-proceso {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 30px;
@@ -256,7 +256,7 @@ h1, h2, h3 {
   margin: 0 auto;
 }
 
-.step {
+.paso {
   background: var(--white);
   padding: 30px 20px;
   border-radius: var(--radius);
@@ -264,7 +264,7 @@ h1, h2, h3 {
   box-shadow: var(--shadow);
 }
 
-.step-number {
+.numero-paso {
   font-size: 2rem;
   font-weight: 700;
   color: var(--primary);
@@ -274,12 +274,12 @@ h1, h2, h3 {
 /* ======================= */
 /* Botón de regreso */
 /* ======================= */
-.button-container {
+.contenedor-boton {
   text-align: center;
   margin: 50px 0 20px;
 }
 
-.simple-back-button {
+.boton-regreso-simple {
   padding: 10px 90px;
   background-color: var(--primary);
   color: white;
@@ -289,7 +289,7 @@ h1, h2, h3 {
   transition: background-color 0.2s;
 }
 
-.simple-back-button:hover {
+.boton-regreso-simple:hover {
   background-color: var(--white);
   color: var(--primary);
   border: 1px solid var(--primary);
@@ -299,35 +299,35 @@ h1, h2, h3 {
 /* Estilos responsivos */
 /* ======================= */
 @media (max-width: 992px) {
-  .hero-content {
+  .contenido-hero {
     flex-direction: column;
     gap: 40px;
   }
-  .hero-image {
+  .imagen-hero {
     order: -1; /* Imagen arriba en pantallas pequeñas */
   }
 }
 
 @media (max-width: 768px) {
-  .main-header .container {
+  .cabecera-principal .contenedor {
     flex-direction: column;
     gap: 20px;
   }
-  .main-nav .nav-list {
+  .navegacion-principal .lista-navegacion {
     gap: 15px;
     flex-wrap: wrap;
     justify-content: center;
   }
-  .hero-title {
+  .titulo-hero {
     font-size: 2rem;
   }
 }
 
 @media (max-width: 576px) {
-  .process-steps {
+  .pasos-proceso {
     grid-template-columns: 1fr; /* Un paso por fila */
   }
-  .hero-section, .catalog-section, .how-we-work {
+  .seccion-hero, .seccion-catalogo, .como-trabajamos {
     padding: 60px 0;
   }
 }
