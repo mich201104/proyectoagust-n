@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mi Carrito</title>
+  <!-- Enlace a css -->
+  <link rel="stylesheet" href="../css/carrito.css" />
+  <!-- Fuentes de Google para letra bonita -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Lobster&display=swap"
+    rel="stylesheet"
+  />
+
+</head>
+<body>
+  <!-- Encabezado principal del sitio -->
+  <header class="encabezado-principal">
+    <div class="contenedor">
+      <!-- Logo de la marca -->
+      <a href="index.html" class="logo-marca">
+        <img src="images/logo.png" alt="Dino-Bake Logo" width="120" />
+      </a>
+
+      <!-- Navegación principal -->
+      <nav class="navegacion-principal">
+        <ul class="lista-navegacion">
+          <li class="item-navegacion">
+            <a href="emprendedores.html" class="enlace-navegacion">
+              <img
+                src="images/emprendedor.png"
+                alt="Emprendedores"
+                class="icono-navegacion"
+              />
+              <span>Emprendedores</span>
+            </a>
+          </li>
+
+          <li class="item-navegacion">
+            <a href="carrito.html" class="enlace-navegacion">
+              <img
+                src="images/carrito.png"
+                alt="Carrito"
+                class="icono-navegacion"
+              />
+              <span>Carrito</span>
+            </a>
+          </li>
+
+          <li class="item-navegacion">
+            <a href="contacto.html" class="enlace-navegacion">
+              <img
+                src="images/contacto.png"
+                alt="Contacto"
+                class="icono-navegacion"
+              />
+              <span>Contáctanos</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <a href="perfil.html" class="perfil-usuario">
+        <img src="images/emprendedor.png" alt="usuario" />
+      </a>
+    </div>
+  </header>
+
+  <!-- Contenedor central con mensaje y botón centrados -->
+  <main class="contenedor-central">
+    <h1>¡Gracias por tu compra!</h1>
+    <a href="emprendedores.html" class="boton">Regresar a comprar</a>
+  </main>
+  <!--CSS RAPIDO-->
+  <style>
+    /* Contenedor que centra vertical y horizontal */
+    .contenedor-central {
+      height: 60vh; 
+      display: flex;
+      flex-direction: column;
+      justify-content: center; 
+      align-items: center; 
+      gap: 30px; /* espacio entre el gracias y el botón */
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    h1 {
+      font-family: 'Lobster', cursive;
+      font-size: 5rem;
+      color: #333;
+      text-align: center;
+    }
+    .boton {
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      font-weight: 1000;
+      color: rgb(0, 0, 0);
+      background-color: #8fddff;
+    }
+  </style>
+  
+</body>
+</html>
